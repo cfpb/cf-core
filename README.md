@@ -4,9 +4,8 @@
 [![npm dependency status](https://gemnasium.com/cfpb/cf-core.svg)](https://gemnasium.com/cfpb/cf-core)
 
 Core styles for starting a Capital Framework project.
-It includes Less variables, Less mixins and class utilities,
-standard base styling, and typography styles including heading hierarchy, links,
-and some handy webfont mixins.
+It includes variables, media query and utility mixins, class utilities and
+standard base styling.
 This component can be used by itself, but it was made for Capital Framework,
 a new front end framework developed at the
 [Consumer Financial Protection Bureau](https://cfpb.github.io/).
