@@ -1,7 +1,6 @@
 # cf-core
 
-[![Bower dependency status](https://www.versioneye.com/user/projects/533069907bae4b78ef00000b/badge.png)](https://www.versioneye.com/user/projects/533069907bae4b78ef00000b)
-[![npm dependency status](https://gemnasium.com/cfpb/cf-core.svg)](https://gemnasium.com/cfpb/cf-core)
+[![Dependency Status](https://gemnasium.com/cfpb/cf-core.svg)](https://gemnasium.com/cfpb/cf-core)
 
 Core styles for starting a Capital Framework project.
 It includes Normalize.css, variables, media query and utility mixins,
