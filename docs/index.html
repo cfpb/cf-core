@@ -5,66 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>cf-core docs</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="static/demo/demo.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic">
+    <link rel="stylesheet" type="text/css" href="static/docs/brackets.css">
+    <link rel="stylesheet" type="text/css" href="static/docs/docs.css">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
-    <link rel="stylesheet" type="text/css" href="static/demo/brackets.css">
   </head>
   <body>
-    <div class="demo-wrapper">
-      <header class="demo_header">
-        <h1 class="h5">cf-core docs</h1>
-      </header>
-      <ul class="demo-component-list">
-        <li id="less-variables" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Less variables</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Font sizes</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>@base-font-size-px: 16px;</code></pre>
-                  </li>
-                  <li>
-                    <pre class="code"><code>@base-line-height-px: 22px;</code></pre>
-                  </li>
-                  <li>
-                    <pre class="code"><code>@base-line-height: unit(@base-line-height-px / @base-font-size-px);</code></pre>
-                  </li>
-                </ul>
-              </header>
-            </li>
-          </ul>
-        </li>
-        <li id="media-query-mixins" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Media query mixins</h1>
-          <ul class="demo_notes">
-            <li>These mixins allow us to write consistent media queries using pixel values, which are easier to remember. The mixins handle converting the pixels into em's.</li>
-          </ul>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>min-width/max-width media queries</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.respond-to-min(@bp, @rules)</code></pre>
-                  </li>
-                  <li>
-                    <pre class="code"><code>.respond-to-max(@bp, @rules)</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>@bp: the breakpoint size in pixels. It will get converted into em's.</li>
-                  <li>@rules: a CSS or Less ruleset. Note that it can contain the full set of Less features.</li>
-                </ul>
-              </header>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>min-width/max-width media query usage</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.respond-to-min(768px, {
+    <div class="docs-masthead">
+      <h1 class="docs-title"><span class="docs-icon">&lt;/&gt;</span> cf-core docs
+      </h1><a href="https://github.com/cfpb/cf-core" class="docs-repo">view the repository</a>
+    </div>
+    <div id="less-variables" class="docs-component">
+      <h2 class="docs-component_header"><span>Less variables</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Font sizes</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>@base-font-size-px: 16px;</code></pre>
+              </li>
+              <li>
+                <pre class="docs-code"><code>@base-line-height-px: 22px;</code></pre>
+              </li>
+              <li>
+                <pre class="docs-code"><code>@base-line-height: unit(@base-line-height-px / @base-font-size-px);</code></pre>
+              </li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div id="media-query-mixins" class="docs-component">
+      <h2 class="docs-component_header"><span>Media query mixins</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-notes">
+          <li>These mixins allow us to write consistent media queries using pixel values, which are easier to remember. The mixins handle converting the pixels into em's.</li>
+        </ul>
+      </div>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">min-width/max-width media queries</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.respond-to-min(@bp, @rules)</code></pre>
+              </li>
+              <li>
+                <pre class="docs-code"><code>.respond-to-max(@bp, @rules)</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>@bp: the breakpoint size in pixels. It will get converted into em's.</li>
+              <li>@rules: a CSS or Less ruleset. Note that it can contain the full set of Less features.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">min-width/max-width media query usage</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.respond-to-min(768px, {
     .title {
         font-size: 2em;
     }
@@ -77,31 +79,31 @@ Compiles to:
         font-size: 2em;
     }
 }</code></pre>
-                  </li>
-                </ul>
-              </header>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>min-width/max-width media query range</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.respond-to-range(@bp1, @bp2, @rules)</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>@bp1: the min-width breakpoint size in pixels. It will get converted into em's.</li>
-                  <li>@bp2: the max-width breakpoint size in pixels. It will get converted into em's.</li>
-                  <li>@rules: a CSS or Less ruleset. Note that it can contain the full set of Less features.</li>
-                </ul>
-              </header>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>min-width/max-width media query range usage</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.respond-to-range(320px, 768px, {
+              </li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">min-width/max-width media query range</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.respond-to-range(@bp1, @bp2, @rules)</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>@bp1: the min-width breakpoint size in pixels. It will get converted into em's.</li>
+              <li>@bp2: the max-width breakpoint size in pixels. It will get converted into em's.</li>
+              <li>@rules: a CSS or Less ruleset. Note that it can contain the full set of Less features.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">min-width/max-width media query range usage</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.respond-to-range(320px, 768px, {
     .title {
         font-size: 2em;
     }
@@ -114,42 +116,41 @@ Compiles to:
         font-size: 2em;
     }
 }</code></pre>
-                  </li>
-                </ul>
-              </header>
-            </li>
-          </ul>
-        </li>
-        <li id="clearfix" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Clearfix</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Utility class</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-clearfix;</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Use this class to clear floats. For example, without .u-clearfix the black box would spill into the markup section.</li>
-                  <li>More information: http://css-tricks.com/snippets/css/clear-fix/</li>
-                </ul>
-              </header>
-              <section>
+              </li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div id="clearfix" class="docs-component">
+      <h2 class="docs-component_header"><span>Clearfix</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Utility class</h3>
+          <section class="docs-pattern_pattern">
 <div class="u-clearfix">
     <div style="float:left; width:100%; height:60px; background:black;"></div>
 </h1>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;div class=&quot;u-clearfix&quot;&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;u-clearfix&quot;&gt;
     &lt;div style=&quot;float:left; width:100%; height:60px; background:black;&quot;&gt;&lt;/div&gt;
 &lt;/h1&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.u-clearfix:after {
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-clearfix;</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Use this class to clear floats. For example, without .u-clearfix the black box would spill into the markup section.</li>
+              <li>More information: http://css-tricks.com/snippets/css/clear-fix/</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.u-clearfix:after {
   content: &quot;&quot;;
   display: table;
   clear: both;
@@ -157,43 +158,42 @@ Compiles to:
 .lt-ie8 .u-clearfix {
   zoom: 1;
 }</code></pre>
-          </div>
-        </li>
-        <li id="visually-hidden" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Visually hidden</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Utility class</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-visually-hidden;</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Use this class to hide something from view while keeping it accessible to screen readers.</li>
-                </ul>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="visually-hidden" class="docs-component">
+      <h2 class="docs-component_header"><span>Visually hidden</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Utility class</h3>
+          <section class="docs-pattern_pattern">
 <h1>
     <a href="#">
         <span class="cf-icon cf-icon-twitter-square"></span>
         <span class="u-visually-hidden">Share on Twitter</span>
     </a>
 </h1>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;h1&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;h1&gt;
     &lt;a href=&quot;#&quot;&gt;
         &lt;span class=&quot;cf-icon cf-icon-twitter-square&quot;&gt;&lt;/span&gt;
         &lt;span class=&quot;u-visually-hidden&quot;&gt;Share on Twitter&lt;/span&gt;
     &lt;/a&gt;
 &lt;/h1&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.u-visually-hidden {
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-visually-hidden;</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Use this class to hide something from view while keeping it accessible to screen readers.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.u-visually-hidden {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -203,104 +203,91 @@ Compiles to:
   padding: 0;
   border: 0;
 }</code></pre>
-          </div>
-        </li>
-        <li id="inline-block" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Inline block</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Utility class</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-inline-block;</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Also adds a .lt-ie8 class to hack inline-block for IE 7 and below.</li>
-                </ul>
-              </header>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.u-inline-block {
+      </div>
+    </div>
+    <div id="inline-block" class="docs-component">
+      <h2 class="docs-component_header"><span>Inline block</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Utility class</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-inline-block;</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Also adds a .lt-ie8 class to hack inline-block for IE 7 and below.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.u-inline-block {
   display: inline-block;
 }
 .lt-ie8 .u-inline-block {
   display: inline;
 }</code></pre>
-          </div>
-        </li>
-        <li id="floating-right" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Floating right</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Utility class</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-right;</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>IE7 float: right drop bug fixes:</li>
-                  <li>1. If the float: right follows an element in the html structure that should be to its left (and not above it), then that preceding element(s) must be float: left. http://stackoverflow.com/questions/10981767/clean-css-fix-of-ie7s-float-right-drop-bug#answer-11437688</li>
-                  <li>2. Simply change the markup order so that the element floating right comes before the element to its left.</li>
-                </ul>
-              </header>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.u-right {
+      </div>
+    </div>
+    <div id="floating-right" class="docs-component">
+      <h2 class="docs-component_header"><span>Floating right</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Utility class</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-right;</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>IE7 float: right drop bug fixes:</li>
+              <li>1. If the float: right follows an element in the html structure that should be to its left (and not above it), then that preceding element(s) must be float: left. http://stackoverflow.com/questions/10981767/clean-css-fix-of-ie7s-float-right-drop-bug#answer-11437688</li>
+              <li>2. Simply change the markup order so that the element floating right comes before the element to its left.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.u-right {
   float: right;
 }</code></pre>
-          </div>
-        </li>
-        <li id="align-with-button" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Align with button</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Utility class</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-align-with-btn(@font-size: @base-font-size-px);</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Adds top padding (among other things) to help alignment with buttons.</li>
-                  <li>If you pass no arguments then the padding will be calculated using @base-font-size-px.</li>
-                  <li>Pass one argument to use a custom font size to calculate the top padding.</li>
-                </ul>
-              </header>
-            </li>
-          </ul>
-        </li>
-        <li id="flexible-proportional-containers" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Flexible proportional containers</h1>
-          <ul class="demo_notes">
-            <li>Utilizes intrinsic ratios to create a flexible container that retains its aspect ratio. When image tags scale they retain their aspect ratio, but if you need a flexible video you will need to use this mixin.</li>
-            <li>You can read more about intrinsic rations here: http://alistapart.com/article/creating-intrinsic-ratios-for-video</li>
-          </ul>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default example</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>Structural sheat sheet:
------------------------
-.u-flexible-container
-  .u-flexible-container_inner</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Defaults to a 16:19 ratio.</li>
-                  <li>Original mixin credit: https://gist.github.com/craigmdennis/6655047</li>
-                  <li>Note that inline style usage is being used for demo purposes only. Please do not use inline styles.</li>
-                </ul>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="align-with-button" class="docs-component">
+      <h2 class="docs-component_header"><span>Align with button</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Utility class</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-align-with-btn(@font-size: @base-font-size-px);</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Adds top padding (among other things) to help alignment with buttons.</li>
+              <li>If you pass no arguments then the padding will be calculated using @base-font-size-px.</li>
+              <li>Pass one argument to use a custom font size to calculate the top padding.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div id="flexible-proportional-containers" class="docs-component">
+      <h2 class="docs-component_header"><span>Flexible proportional containers</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-notes">
+          <li>Utilizes intrinsic ratios to create a flexible container that retains its aspect ratio. When image tags scale they retain their aspect ratio, but if you need a flexible video you will need to use this mixin.</li>
+          <li>You can read more about intrinsic rations here: http://alistapart.com/article/creating-intrinsic-ratios-for-video</li>
+        </ul>
+      </div>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default example</h3>
+          <section class="docs-pattern_pattern">
 <div class="u-flexible-container">
     <video
       class="u-flexible-container_inner"
@@ -308,33 +295,34 @@ Compiles to:
       controls>
     </video>
 </div>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;div class=&quot;u-flexible-container&quot;&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;u-flexible-container&quot;&gt;
     &lt;video
       class=&quot;u-flexible-container_inner&quot;
       style=&quot;background:#75787B;&quot;
       controls&gt;
     &lt;/video&gt;
 &lt;/div&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Background image examples</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>Structural sheat sheet:
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>Structural sheat sheet:
 -----------------------
-.u-flexible-container</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>If you're not using the video or object elements and all you need is a proportionally cropped or scaling background image with a fluid container then you can leave out u-flexible-container_inner.</li>
-                  <li>Note that inline style usage is being used for demo purposes only. Please do not use inline styles.</li>
-                </ul>
-              </header>
-              <section>
+.u-flexible-container
+  .u-flexible-container_inner</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Defaults to a 16:19 ratio.</li>
+              <li>Original mixin credit: https://gist.github.com/craigmdennis/6655047</li>
+              <li>Note that inline style usage is being used for demo purposes only. Please do not use inline styles.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Background image examples</h3>
+          <section class="docs-pattern_pattern">
 <div class="u-flexible-container"
      style="
        background-image:url(http://placekitten.com/700/394);
@@ -348,9 +336,10 @@ Compiles to:
        background-size: cover;
      ">
 </div>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;div class=&quot;u-flexible-container&quot;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;u-flexible-container&quot;
      style=&quot;
        background-image:url(http://placekitten.com/700/394);
        background-position: center center;
@@ -363,25 +352,22 @@ Compiles to:
        background-size: cover;
      &quot;&gt;
 &lt;/div&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>4-3 modifier</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>Structural sheat sheet:
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>Structural sheat sheet:
 -----------------------
-.u-flexible-container.u-flexible-container__4-3
-  .u-flexible-container_inner</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Create your own aspect ratios by using this modifier as an example.</li>
-                  <li>Note that inline style usage is being used for demo purposes only. Please do not use inline styles.</li>
-                </ul>
-              </header>
-              <section>
+.u-flexible-container</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>If you're not using the video or object elements and all you need is a proportionally cropped or scaling background image with a fluid container then you can leave out u-flexible-container_inner.</li>
+              <li>Note that inline style usage is being used for demo purposes only. Please do not use inline styles.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">4-3 modifier</h3>
+          <section class="docs-pattern_pattern">
 <div class="u-flexible-container u-flexible-container__4-3">
     <video
       class="u-flexible-container_inner"
@@ -389,20 +375,33 @@ Compiles to:
       controls>
     </video>
 </div>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;div class=&quot;u-flexible-container u-flexible-container__4-3&quot;&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;u-flexible-container u-flexible-container__4-3&quot;&gt;
     &lt;video
       class=&quot;u-flexible-container_inner&quot;
       style=&quot;background:#75787B;&quot;
       controls&gt;
     &lt;/video&gt;
 &lt;/div&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.u-flexible-container {
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>Structural sheat sheet:
+-----------------------
+.u-flexible-container.u-flexible-container__4-3
+  .u-flexible-container_inner</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Create your own aspect ratios by using this modifier as an example.</li>
+              <li>Note that inline style usage is being used for demo purposes only. Please do not use inline styles.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.u-flexible-container {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
@@ -419,294 +418,286 @@ Compiles to:
   padding-bottom: 75%;
   height: 0;
 }</code></pre>
-          </div>
-        </li>
-        <li id="link-mixins" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Link mixins</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-link__colors();</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Pass this mixin no arguments to color your link states with the following defaults: :link (default state) pacific, :hover pacific-50, :focus: pacific, :visited teal, :active navy.</li>
-                </ul>
-              </header>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-link__colors(@c);</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Pass this mixin one color to be used on all of the following states of your link; :link (default state), :visited, :hover, :focus, :active.</li>
-                </ul>
-              </header>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-link__colors(@c, @h);</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Pass this mixin two colors to use the first color for the :link, :visited, and :active states, and the second color for the :hover and :focus states.</li>
-                </ul>
-              </header>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-link__colors(@c, @v, @h, @f, @a);</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Pass this mixin five colors in 'love/hate' mnemonic order to color :link, :visited, :hover, :focus, and :active states respectively.</li>
-                  <li>Even though this mixin is basically the same as .u-link__colors-base(@c, @v, @h, @f, @a); we encourage you to use .u-link__colors(@c, @v, @h, @f, @a) to promote consistency.</li>
-                </ul>
-              </header>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba);</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Allows you to color text and the bottom border separately.</li>
-                  <li>The first five colors in 'love/hate' mnemonic order will color text for the :link, :visited, :hover, :focus, and :active states respectively. The last five colors in 'love/hate' mnemonic order will color the bottom border for the :link, :visited, :hover, :focus, and :active states respectively.</li>
-                  <li>Even though this mixin is basically the same as .u-link__colors-base(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba); we encourage you to use .u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba) to promote consistency.</li>
-                </ul>
-              </header>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-link__colors-base(@c, @v, @h, @f, @a);</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>This is the base mixin that all .u-link__colors() mixins use. Please refrain from using this mixin directly in order to promote a consistent use of mixin names for coloring links throughout this project. Remember that if you need to set colors for all states of a link you should use .u-link__colors(@c, @v, @h, @f, @a).</li>
-                </ul>
-              </header>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-link__border();</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Forces the default bottom border on the :link and :hover states.</li>
-                </ul>
-              </header>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-link__no-border();</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Turn off the default bottom border on the :link and :hover states.</li>
-                </ul>
-              </header>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-link__hover-border();</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Turn off the default bottom border on the :link state and force a bottom border on the :hover state.</li>
-                </ul>
-              </header>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-link-child__hover();</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>When a link has child elements you may want only certain children to change color when the parent link is hovered. Pass no arguments to this mixin to color the child element pacific when the parent link is hovered.</li>
-                </ul>
-              </header>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.u-link-child__hover(@c);</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Pass this mixin one color to color the child element when the parent link is hovered.</li>
-                </ul>
-              </header>
-            </li>
-          </ul>
-        </li>
-        <li id="webfonts" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Webfonts</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Licensed webfonts</h3>
-                <ul class="demo_notes">
-                  <li>Avenir Next is included via the licensed-fonts.css file. This file contains absolute links to our paid font service. Fonts included this way will only work on CFPB-registered domains.</li>
-                  <li>Note that when using Avenir Regular we automatically fix faux italic and bold issues by overriding i, em, b, and strong tags to use the appropriate fonts.</li>
-                </ul>
-              </header>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Webfont mixins</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>.webfont-regular()</code></pre>
-                  </li>
-                  <li>
-                    <pre class="code"><code>.webfont-italic()</code></pre>
-                  </li>
-                  <li>
-                    <pre class="code"><code>.webfont-medium()</code></pre>
-                  </li>
-                  <li>
-                    <pre class="code"><code>.webfont-demi()</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>Use these mixins to easily add the Avenir Next font family to your elements.</li>
-                  <li>To avoid faux bold and italics in Avenir Next, you must use the font family name for that particular style. So when defining an italic or bold style in Avenir Next you need to use the Avenir Next Italic font family. Use the mixins when setting bold or italic text as they also set the appropriate font-weight and font-style.</li>
-                  <li>These mixins also add the appropriate .lt-ie9 overrides. .lt-ie9 overrides are necessary to override font-style and font-weight each time the webfont is used. These overrides are built into the webfont mixins so you get them automatically. Note that this requires you to use conditional classes on the &lt;html&gt; element: https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md#conditional-html-classes.</li>
-                </ul>
-              </header>
-            </li>
-          </ul>
-        </li>
-        <li id="type-hierarchy" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Type hierarchy</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default body type</h3>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="link-mixins" class="docs-component">
+      <h2 class="docs-component_header"><span>Link mixins</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-link__colors();</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Pass this mixin no arguments to color your link states with the following defaults: :link (default state) pacific, :hover pacific-50, :focus: pacific, :visited teal, :active navy.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-link__colors(@c);</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Pass this mixin one color to be used on all of the following states of your link; :link (default state), :visited, :hover, :focus, :active.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-link__colors(@c, @h);</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Pass this mixin two colors to use the first color for the :link, :visited, and :active states, and the second color for the :hover and :focus states.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-link__colors(@c, @v, @h, @f, @a);</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Pass this mixin five colors in 'love/hate' mnemonic order to color :link, :visited, :hover, :focus, and :active states respectively.</li>
+              <li>Even though this mixin is basically the same as .u-link__colors-base(@c, @v, @h, @f, @a); we encourage you to use .u-link__colors(@c, @v, @h, @f, @a) to promote consistency.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba);</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Allows you to color text and the bottom border separately.</li>
+              <li>The first five colors in 'love/hate' mnemonic order will color text for the :link, :visited, :hover, :focus, and :active states respectively. The last five colors in 'love/hate' mnemonic order will color the bottom border for the :link, :visited, :hover, :focus, and :active states respectively.</li>
+              <li>Even though this mixin is basically the same as .u-link__colors-base(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba); we encourage you to use .u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba) to promote consistency.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-link__colors-base(@c, @v, @h, @f, @a);</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>This is the base mixin that all .u-link__colors() mixins use. Please refrain from using this mixin directly in order to promote a consistent use of mixin names for coloring links throughout this project. Remember that if you need to set colors for all states of a link you should use .u-link__colors(@c, @v, @h, @f, @a).</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-link__border();</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Forces the default bottom border on the :link and :hover states.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-link__no-border();</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Turn off the default bottom border on the :link and :hover states.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-link__hover-border();</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Turn off the default bottom border on the :link state and force a bottom border on the :hover state.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-link-child__hover();</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>When a link has child elements you may want only certain children to change color when the parent link is hovered. Pass no arguments to this mixin to color the child element pacific when the parent link is hovered.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-link-child__hover(@c);</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Pass this mixin one color to color the child element when the parent link is hovered.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div id="webfonts" class="docs-component">
+      <h2 class="docs-component_header"><span>Webfonts</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Licensed webfonts</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-notes">
+              <li>Avenir Next is included via the licensed-fonts.css file. This file contains absolute links to our paid font service. Fonts included this way will only work on CFPB-registered domains.</li>
+              <li>Note that when using Avenir Regular we automatically fix faux italic and bold issues by overriding i, em, b, and strong tags to use the appropriate fonts.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Webfont mixins</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.webfont-regular()</code></pre>
+              </li>
+              <li>
+                <pre class="docs-code"><code>.webfont-italic()</code></pre>
+              </li>
+              <li>
+                <pre class="docs-code"><code>.webfont-medium()</code></pre>
+              </li>
+              <li>
+                <pre class="docs-code"><code>.webfont-demi()</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Use these mixins to easily add the Avenir Next font family to your elements.</li>
+              <li>To avoid faux bold and italics in Avenir Next, you must use the font family name for that particular style. So when defining an italic or bold style in Avenir Next you need to use the Avenir Next Italic font family. Use the mixins when setting bold or italic text as they also set the appropriate font-weight and font-style.</li>
+              <li>These mixins also add the appropriate .lt-ie9 overrides. .lt-ie9 overrides are necessary to override font-style and font-weight each time the webfont is used. These overrides are built into the webfont mixins so you get them automatically. Note that this requires you to use conditional classes on the &lt;html&gt; element: https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md#conditional-html-classes.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div id="type-hierarchy" class="docs-component">
+      <h2 class="docs-component_header"><span>Type hierarchy</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default body type</h3>
+          <section class="docs-pattern_pattern">
 <p>Lorem ipsum dolor sit amet, <em>consectetur adipisicing elit</em>, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;p&gt;Lorem ipsum dolor sit amet, &lt;em&gt;consectetur adipisicing elit&lt;/em&gt;, sed do eiusmod &lt;strong&gt;tempor incididunt&lt;/strong&gt; ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Heading level 1</h3>
-              </header>
-              <section>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;p&gt;Lorem ipsum dolor sit amet, &lt;em&gt;consectetur adipisicing elit&lt;/em&gt;, sed do eiusmod &lt;strong&gt;tempor incididunt&lt;/strong&gt; ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;</code></pre>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Heading level 1</h3>
+          <section class="docs-pattern_pattern">
 <h1>Example heading element</h1>
 <p class="h1">A non-heading element</p>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;h1&gt;Example heading element&lt;/h1&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;h1&gt;Example heading element&lt;/h1&gt;
 &lt;p class=&quot;h1&quot;&gt;A non-heading element&lt;/p&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Heading level 2</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Heading level 2</h3>
+          <section class="docs-pattern_pattern">
 <h2>Example heading element</h2>
 <p class="h2">A non-heading element</p>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;h2&gt;Example heading element&lt;/h2&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;h2&gt;Example heading element&lt;/h2&gt;
 &lt;p class=&quot;h2&quot;&gt;A non-heading element&lt;/p&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Heading level 3</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Heading level 3</h3>
+          <section class="docs-pattern_pattern">
 <h3>Example heading element</h3>
 <p class="h3">A non-heading element</p>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;h3&gt;Example heading element&lt;/h3&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;h3&gt;Example heading element&lt;/h3&gt;
 &lt;p class=&quot;h3&quot;&gt;A non-heading element&lt;/p&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Heading level 4</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Heading level 4</h3>
+          <section class="docs-pattern_pattern">
 <h4>Example heading element</h4>
 <p class="h4">A non-heading element</p>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;h4&gt;Example heading element&lt;/h4&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;h4&gt;Example heading element&lt;/h4&gt;
 &lt;p class=&quot;h4&quot;&gt;A non-heading element&lt;/p&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Heading level 5</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Heading level 5</h3>
+          <section class="docs-pattern_pattern">
 <h5>Example heading element</h5>
 <p class="h5">A non-heading element</p>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;h5&gt;Example heading element&lt;/h5&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;h5&gt;Example heading element&lt;/h5&gt;
 &lt;p class=&quot;h5&quot;&gt;A non-heading element&lt;/p&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Heading level 6</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Heading level 6</h3>
+          <section class="docs-pattern_pattern">
 <h6>Example heading element</h6>
 <p class="h6">A non-heading element</p>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;h6&gt;Example heading element&lt;/h6&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;h6&gt;Example heading element&lt;/h6&gt;
 &lt;p class=&quot;h6&quot;&gt;A non-heading element&lt;/p&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Super header</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Super header</h3>
+          <section class="docs-pattern_pattern">
 <h1 class="superheader">Example super heading</h1>
 <p class="superheader">Example super heading</p>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;h1 class=&quot;superheader&quot;&gt;Example super heading&lt;/h1&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;h1 class=&quot;superheader&quot;&gt;Example super heading&lt;/h1&gt;
 &lt;p class=&quot;superheader&quot;&gt;Example super heading&lt;/p&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">body {
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">body {
   color: #101820;
   font-family: Georgia, &quot;Times New Roman&quot;, serif;
   font-size: 100%;
@@ -858,30 +849,29 @@ h6,
 .lt-ie9 .superheader {
   font-weight: normal !important;
 }</code></pre>
-          </div>
-        </li>
-        <li id="margins" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Margins</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Consistent vertical margins</h3>
-                <ul class="demo_notes">
-                  <li>Assumes that the font size of each of these items remains the default.</li>
-                </ul>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="margins" class="docs-component">
+      <h2 class="docs-component_header"><span>Margins</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Consistent vertical margins</h3>
+          <section class="docs-pattern_pattern">
 <p>Paragraph margin example</p>
 <p>Paragraph margin example</p>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;p&gt;Paragraph margin example&lt;/p&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;p&gt;Paragraph margin example&lt;/p&gt;
 &lt;p&gt;Paragraph margin example&lt;/p&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">p,
+            <ul class="docs-notes">
+              <li>Assumes that the font size of each of these items remains the default.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">p,
 ul,
 ol,
 dl,
@@ -890,72 +880,69 @@ figure {
   margin-top: 0;
   margin-bottom: 1.25em;
 }</code></pre>
-          </div>
-        </li>
-        <li id="default-link" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Default link</h1>
-          <ul class="demo_notes">
-            <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not  be used in production.</li>
-          </ul>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default state</h3>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="default-link" class="docs-component">
+      <h2 class="docs-component_header"><span>Default link</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-notes">
+          <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not  be used in production.</li>
+        </ul>
+      </div>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#">Default link style</a>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot;&gt;Default link style&lt;/a&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Visited state</h3>
-              </header>
-              <section>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot;&gt;Default link style&lt;/a&gt;</code></pre>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Visited state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="visited">Visited link style</a>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;visited&quot;&gt;Visited link style&lt;/a&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Hovered state</h3>
-              </header>
-              <section>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;visited&quot;&gt;Visited link style&lt;/a&gt;</code></pre>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Hovered state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="hover">Hovered link style</a>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;hover&quot;&gt;Hovered link style&lt;/a&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Focused state</h3>
-              </header>
-              <section>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;hover&quot;&gt;Hovered link style&lt;/a&gt;</code></pre>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Focused state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="focus">Focused link style</a>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;focus&quot;&gt;Focused link style&lt;/a&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Active state</h3>
-              </header>
-              <section>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;focus&quot;&gt;Focused link style&lt;/a&gt;</code></pre>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Active state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="active">Active link style</a>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Active link style&lt;/a&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">a {
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Active link style&lt;/a&gt;</code></pre>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">a {
   border-width: 0;
   border-style: dotted;
   border-color: #0072ce;
@@ -984,20 +971,14 @@ a.active {
   border-color: #002d72;
   color: #002d72;
 }</code></pre>
-          </div>
-        </li>
-        <li id="underlined-links" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Underlined links</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>States</h3>
-                <ul class="demo_notes">
-                  <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not  be used in production.</li>
-                  <li>The underline style properties are mostly set above in the a tag. To enable the underline simply set a bottom-border-width as done here.</li>
-                </ul>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="underlined-links" class="docs-component">
+      <h2 class="docs-component_header"><span>Underlined links</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">States</h3>
+          <section class="docs-pattern_pattern">
 <p>
     <a href="#">Default</a>,
     <a href="#" class="visited">Visited</a>,
@@ -1005,25 +986,25 @@ a.active {
     <a href="#" class="focus">Focused</a>,
     <a href="#" class="active">Active</a>
 </p>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;p&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;p&gt;
     &lt;a href=&quot;#&quot;&gt;Default&lt;/a&gt;,
     &lt;a href=&quot;#&quot; class=&quot;visited&quot;&gt;Visited&lt;/a&gt;,
     &lt;a href=&quot;#&quot; class=&quot;hover&quot;&gt;Hovered&lt;/a&gt;,
     &lt;a href=&quot;#&quot; class=&quot;focus&quot;&gt;Focused&lt;/a&gt;,
     &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Active&lt;/a&gt;
 &lt;/p&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Underline conditions</h3>
-                <ul class="demo_notes">
-                  <li>We're restricting link borders to links within p, li, and dd so that we don't have to override them every time we want a plain link.</li>
-                </ul>
-              </header>
-              <section>
+            <ul class="docs-notes">
+              <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not  be used in production.</li>
+              <li>The underline style properties are mostly set above in the a tag. To enable the underline simply set a bottom-border-width as done here.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Underline conditions</h3>
+          <section class="docs-pattern_pattern">
 <p>
     <a href="#">A child of a paragraph</a>
 </p>
@@ -1040,9 +1021,10 @@ a.active {
         <a href="#">A child of a definition list description</a>
     </dd>
 </dl>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;p&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;p&gt;
     &lt;a href=&quot;#&quot;&gt;A child of a paragraph&lt;/a&gt;
 &lt;/p&gt;
 &lt;ul&gt;
@@ -1058,16 +1040,14 @@ a.active {
         &lt;a href=&quot;#&quot;&gt;A child of a definition list description&lt;/a&gt;
     &lt;/dd&gt;
 &lt;/dl&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Exceptions for underlined links</h3>
-                <ul class="demo_notes">
-                  <li>Inline text links inside of a nav element are not underlined.</li>
-                </ul>
-              </header>
-              <section>
+            <ul class="docs-notes">
+              <li>We're restricting link borders to links within p, li, and dd so that we don't have to override them every time we want a plain link.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Exceptions for underlined links</h3>
+          <section class="docs-pattern_pattern">
 <nav>
     <p>
         <a href="#">A child of a paragraph</a>
@@ -1086,9 +1066,10 @@ a.active {
         </dd>
     </dl>
 </nav>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;nav&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;nav&gt;
     &lt;p&gt;
         &lt;a href=&quot;#&quot;&gt;A child of a paragraph&lt;/a&gt;
     &lt;/p&gt;
@@ -1106,11 +1087,14 @@ a.active {
         &lt;/dd&gt;
     &lt;/dl&gt;
 &lt;/nav&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">p a,
+            <ul class="docs-notes">
+              <li>Inline text links inside of a nav element are not underlined.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">p a,
 li a,
 dd a {
   border-bottom-width: 1px;
@@ -1118,49 +1102,42 @@ dd a {
 nav a {
   border-bottom-width: 0;
 }</code></pre>
-          </div>
-        </li>
-        <li id="lists" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Lists</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Unordered list</h3>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="lists" class="docs-component">
+      <h2 class="docs-component_header"><span>Lists</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Unordered list</h3>
+          <section class="docs-pattern_pattern">
 <ul>
     <li>List item</li>
     <li>List item</li>
     <li>List item</li>
 </ul>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;ul&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;ul&gt;
     &lt;li&gt;List item&lt;/li&gt;
     &lt;li&gt;List item&lt;/li&gt;
     &lt;li&gt;List item&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">ul {
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">ul {
   list-style: square;
 }</code></pre>
-          </div>
-        </li>
-        <li id="block-quote" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Block quote</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default block quote</h3>
-                <ul class="demo_notes">
-                  <li>Use a block quote to quote from an external work. See .pull-quote if you need to highlight an excerpt from the current work.</li>
-                  <li>It is best practice to document the URL of a quoted work using the cite attribute.</li>
-                </ul>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="block-quote" class="docs-component">
+      <h2 class="docs-component_header"><span>Block quote</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default block quote</h3>
+          <section class="docs-pattern_pattern">
 <blockquote cite="link-to-source">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
     similique fugit hic eligendi praesentium officiis illum optio iusto
@@ -1172,9 +1149,10 @@ nav a {
     sunt laudantium repellat nam commodi. Perspiciatis natus aliquam
     veniam officiis ducimus voluptatum ut necessitatibus non!
 </blockquote>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;blockquote cite=&quot;link-to-source&quot;&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;blockquote cite=&quot;link-to-source&quot;&gt;
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
     similique fugit hic eligendi praesentium officiis illum optio iusto
     commodi eum tempore nisi ad in perferendis enim quo dolores.
@@ -1185,11 +1163,15 @@ nav a {
     sunt laudantium repellat nam commodi. Perspiciatis natus aliquam
     veniam officiis ducimus voluptatum ut necessitatibus non!
 &lt;/blockquote&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">blockquote {
+            <ul class="docs-notes">
+              <li>Use a block quote to quote from an external work. See .pull-quote if you need to highlight an excerpt from the current work.</li>
+              <li>It is best practice to document the URL of a quoted work using the cite attribute.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">blockquote {
   margin: 1.25em;
 }
 @media only all and (min-width: 37.5em) {
@@ -1197,20 +1179,14 @@ nav a {
     margin: 1.75em 2.5em;
   }
 }</code></pre>
-          </div>
-        </li>
-        <li id="pull-quote" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Pull quote</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default pull quote</h3>
-                <ul class="demo_notes">
-                  <li>Use a pull quote to highlight excerpts from the current work. This is not to be confused with blockquote which quotes from an external work.</li>
-                  <li>Since a pull quote is an excerpt and repeats content from the article it's contained within you should use the aside element.</li>
-                </ul>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="pull-quote" class="docs-component">
+      <h2 class="docs-component_header"><span>Pull quote</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default pull quote</h3>
+          <section class="docs-pattern_pattern">
 <aside class="pull-quote">
     <div class="pull-quote_body">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -1223,9 +1199,10 @@ nav a {
         </cite>
     <footer>
 </aside>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;aside class=&quot;pull-quote&quot;&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;aside class=&quot;pull-quote&quot;&gt;
     &lt;div class=&quot;pull-quote_body&quot;&gt;
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Cum corrupti tempora nam nihil qui mollitia consectetur
@@ -1237,13 +1214,15 @@ nav a {
         &lt;/cite&gt;
     &lt;footer&gt;
 &lt;/aside&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Large pull quote</h3>
-              </header>
-              <section>
+            <ul class="docs-notes">
+              <li>Use a pull quote to highlight excerpts from the current work. This is not to be confused with blockquote which quotes from an external work.</li>
+              <li>Since a pull quote is an excerpt and repeats content from the article it's contained within you should use the aside element.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Large pull quote</h3>
+          <section class="docs-pattern_pattern">
 <aside class="pull-quote pull-quote__large">
     <div class="pull-quote_body">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -1256,9 +1235,10 @@ nav a {
         </cite>
     <footer>
 </aside>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;aside class=&quot;pull-quote pull-quote__large&quot;&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;aside class=&quot;pull-quote pull-quote__large&quot;&gt;
     &lt;div class=&quot;pull-quote_body&quot;&gt;
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Cum corrupti tempora nam nihil qui mollitia consectetur
@@ -1270,11 +1250,11 @@ nav a {
         &lt;/cite&gt;
     &lt;footer&gt;
 &lt;/aside&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.pull-quote_body {
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.pull-quote_body {
   font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -1350,89 +1330,88 @@ nav a {
 .lt-ie9 .pull-quote__large .pull-quote_body b {
   font-weight: normal !important;
 }</code></pre>
-          </div>
-        </li>
-        <li id="form-labels" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Form labels</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default label</h3>
-                <ul class="demo_notes">
-                  <li>Warning, this pattern is still under development.</li>
-                </ul>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="form-labels" class="docs-component">
+      <h2 class="docs-component_header"><span>Form labels</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default label</h3>
+          <section class="docs-pattern_pattern">
 <label>I am a form label</label>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;label&gt;I am a form label&lt;/label&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">label {
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;label&gt;I am a form label&lt;/label&gt;</code></pre>
+            <ul class="docs-notes">
+              <li>Warning, this pattern is still under development.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">label {
   display: block;
 }</code></pre>
-          </div>
-        </li>
-        <li id="single-line-text-input" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Single-line text input</h1>
-          <ul class="demo_notes">
-            <li>Most other text-based inputs extend styles from here as seen in the CSS to the right.</li>
-          </ul>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default single-line text input</h3>
-                <ul class="demo_notes">
-                  <li>Note that break tag usage is being used for demo purposes only. Please do not use them for visually separating inputs.</li>
-                </ul>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="single-line-text-input" class="docs-component">
+      <h2 class="docs-component_header"><span>Single-line text input</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-notes">
+          <li>Most other text-based inputs extend styles from here as seen in the CSS to the right.</li>
+        </ul>
+      </div>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default single-line text input</h3>
+          <section class="docs-pattern_pattern">
 <input placeholder="placeholder text" type="text" value=""><br><br>
 <input placeholder="placeholder search text" type="search" value=""><br><br>
 <input placeholder="placeholder email text" type="email" value=""><br><br>
 <input placeholder="placeholder url text" type="url" value=""><br><br>
 <input placeholder="placeholder tel text" type="tel" value=""><br><br>
 <input placeholder="placeholder number text" type="number" value="">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input placeholder=&quot;placeholder text&quot; type=&quot;text&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input placeholder=&quot;placeholder text&quot; type=&quot;text&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
 &lt;input placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
 &lt;input placeholder=&quot;placeholder email text&quot; type=&quot;email&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
 &lt;input placeholder=&quot;placeholder url text&quot; type=&quot;url&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
 &lt;input placeholder=&quot;placeholder tel text&quot; type=&quot;tel&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
 &lt;input placeholder=&quot;placeholder number text&quot; type=&quot;number&quot; value=&quot;&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Focused state</h3>
-                <ul class="demo_notes">
-                  <li>Note that break tag usage is being used for demo purposes only. Please do not use them for visually separating inputs.</li>
-                </ul>
-              </header>
-              <section>
+            <ul class="docs-notes">
+              <li>Note that break tag usage is being used for demo purposes only. Please do not use them for visually separating inputs.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Focused state</h3>
+          <section class="docs-pattern_pattern">
 <input class="focus" placeholder="placeholder text" type="text" value=""><br><br>
 <input class="focus" placeholder="placeholder search text" type="search" value=""><br><br>
 <input class="focus" placeholder="placeholder email text" type="email" value=""><br><br>
 <input class="focus" placeholder="placeholder url text" type="url" value=""><br><br>
 <input class="focus" placeholder="placeholder tel text" type="tel" value=""><br><br>
 <input class="focus" placeholder="placeholder number text" type="number" value="">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder text&quot; type=&quot;text&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder text&quot; type=&quot;text&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
 &lt;input class=&quot;focus&quot; placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
 &lt;input class=&quot;focus&quot; placeholder=&quot;placeholder email text&quot; type=&quot;email&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
 &lt;input class=&quot;focus&quot; placeholder=&quot;placeholder url text&quot; type=&quot;url&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
 &lt;input class=&quot;focus&quot; placeholder=&quot;placeholder tel text&quot; type=&quot;tel&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
 &lt;input class=&quot;focus&quot; placeholder=&quot;placeholder number text&quot; type=&quot;number&quot; value=&quot;&quot;&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">input[type=&quot;text&quot;],
+            <ul class="docs-notes">
+              <li>Note that break tag usage is being used for demo purposes only. Please do not use them for visually separating inputs.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">input[type=&quot;text&quot;],
 input[type=&quot;search&quot;],
 input[type=&quot;email&quot;],
 input[type=&quot;url&quot;],
@@ -1472,46 +1451,39 @@ textarea.focus {
   -webkit-box-shadow: none;
   box-shadow: none;
 }</code></pre>
-          </div>
-        </li>
-        <li id="multiline-textarea" class="demo-component-list_item demo-wrapper">
-          <h1 class="demo-component-list_header">Multiline textarea</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default multi-line text box</h3>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="multiline-textarea" class="docs-component">
+      <h2 class="docs-component_header"><span>Multiline textarea</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default multi-line text box</h3>
+          <section class="docs-pattern_pattern">
 <textarea>Example entry</textarea>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;textarea&gt;Example entry&lt;/textarea&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Focused multi-line text box</h3>
-              </header>
-              <section>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;textarea&gt;Example entry&lt;/textarea&gt;</code></pre>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Focused multi-line text box</h3>
+          <section class="docs-pattern_pattern">
 <textarea class="focus">Example entry</textarea>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;textarea class=&quot;focus&quot;&gt;Example entry&lt;/textarea&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">/* NOTE: all textarea styles extend input[type=&quot;text&quot;]. */
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;textarea class=&quot;focus&quot;&gt;Example entry&lt;/textarea&gt;</code></pre>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">/* NOTE: all textarea styles extend input[type=&quot;text&quot;]. */
 textarea {
   overflow: auto;
 }</code></pre>
-          </div>
-        </li>
-      </ul>
-      <footer class="wrapper-footer">
-        <h4><a href="https://github.com/cfpb/cf-core">View the repository</a></h4>
-      </footer>
+      </div>
     </div>
-    <script src="static/demo/main.min.js"></script>
+    <script src="static/docs/main.min.js"></script>
   </body>
 </html>
