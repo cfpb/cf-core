@@ -1334,18 +1334,20 @@ nav a {
     </div>
     <div id="form-labels" class="docs-component">
       <h2 class="docs-component_header"><span>Form labels</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-notes">
+          <li>Visit https://github.com/cfpb/cf-forms for advanced form label patterns.</li>
+        </ul>
+      </div>
       <div class="docs-patterns">
         <div class="docs-pattern">
           <h3 class="docs-pattern_header">Default label</h3>
           <section class="docs-pattern_pattern">
-<label>I am a form label</label>
+<label>Form label</label>
 
           </section>
           <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;label&gt;I am a form label&lt;/label&gt;</code></pre>
-            <ul class="docs-notes">
-              <li>Warning, this pattern is still under development.</li>
-            </ul>
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;label&gt;Form label&lt;/label&gt;</code></pre>
           </footer>
         </div>
       </div>
@@ -1355,58 +1357,141 @@ nav a {
 }</code></pre>
       </div>
     </div>
-    <div id="single-line-text-input" class="docs-component">
-      <h2 class="docs-component_header"><span>Single-line text input</span></h2>
+    <div id="form-elements" class="docs-component">
+      <h2 class="docs-component_header"><span>Form elements</span></h2>
       <div class="docs-component_intro">
         <ul class="docs-notes">
-          <li>Most other text-based inputs extend styles from here as seen in the CSS to the right.</li>
+          <li>The .focus class is only included for documentation demos and should not be used in production.</li>
+          <li>Visit https://github.com/cfpb/cf-forms for advanced form field patterns.</li>
         </ul>
       </div>
       <div class="docs-patterns">
         <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Default single-line text input</h3>
+          <h3 class="docs-pattern_header">type=&quot;text&quot;</h3>
           <section class="docs-pattern_pattern">
-<input placeholder="placeholder text" type="text" value=""><br><br>
-<input placeholder="placeholder search text" type="search" value=""><br><br>
-<input placeholder="placeholder email text" type="email" value=""><br><br>
-<input placeholder="placeholder url text" type="url" value=""><br><br>
-<input placeholder="placeholder tel text" type="tel" value=""><br><br>
-<input placeholder="placeholder number text" type="number" value="">
+<input type="text" value="Lorem ipsum">
+<input placeholder="Lorem ipsum" type="text" value="">
+<input class="focus" type="text" value="Lorem ipsum">
 
           </section>
           <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input placeholder=&quot;placeholder text&quot; type=&quot;text&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
-&lt;input placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
-&lt;input placeholder=&quot;placeholder email text&quot; type=&quot;email&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
-&lt;input placeholder=&quot;placeholder url text&quot; type=&quot;url&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
-&lt;input placeholder=&quot;placeholder tel text&quot; type=&quot;tel&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
-&lt;input placeholder=&quot;placeholder number text&quot; type=&quot;number&quot; value=&quot;&quot;&gt;</code></pre>
-            <ul class="docs-notes">
-              <li>Note that break tag usage is being used for demo purposes only. Please do not use them for visually separating inputs.</li>
-            </ul>
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input type=&quot;text&quot; value=&quot;Lorem ipsum&quot;&gt;
+&lt;input placeholder=&quot;Lorem ipsum&quot; type=&quot;text&quot; value=&quot;&quot;&gt;
+&lt;input class=&quot;focus&quot; type=&quot;text&quot; value=&quot;Lorem ipsum&quot;&gt;</code></pre>
           </footer>
         </div>
         <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Focused state</h3>
+          <h3 class="docs-pattern_header">type=&quot;search&quot;</h3>
           <section class="docs-pattern_pattern">
-<input class="focus" placeholder="placeholder text" type="text" value=""><br><br>
-<input class="focus" placeholder="placeholder search text" type="search" value=""><br><br>
-<input class="focus" placeholder="placeholder email text" type="email" value=""><br><br>
-<input class="focus" placeholder="placeholder url text" type="url" value=""><br><br>
-<input class="focus" placeholder="placeholder tel text" type="tel" value=""><br><br>
-<input class="focus" placeholder="placeholder number text" type="number" value="">
+<input type="search" value="Lorem ipsum">
+<input placeholder="Lorem ipsum" type="search" value="">
+<input class="focus" type="search" value="Lorem ipsum">
 
           </section>
           <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder text&quot; type=&quot;text&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
-&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
-&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder email text&quot; type=&quot;email&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
-&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder url text&quot; type=&quot;url&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
-&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder tel text&quot; type=&quot;tel&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;
-&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder number text&quot; type=&quot;number&quot; value=&quot;&quot;&gt;</code></pre>
-            <ul class="docs-notes">
-              <li>Note that break tag usage is being used for demo purposes only. Please do not use them for visually separating inputs.</li>
-            </ul>
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input type=&quot;search&quot; value=&quot;Lorem ipsum&quot;&gt;
+&lt;input placeholder=&quot;Lorem ipsum&quot; type=&quot;search&quot; value=&quot;&quot;&gt;
+&lt;input class=&quot;focus&quot; type=&quot;search&quot; value=&quot;Lorem ipsum&quot;&gt;</code></pre>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">type=&quot;email&quot;</h3>
+          <section class="docs-pattern_pattern">
+<input type="email" value="Lorem ipsum">
+<input placeholder="Lorem ipsum" type="email" value="">
+<input class="focus" type="email" value="Lorem ipsum">
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input type=&quot;email&quot; value=&quot;Lorem ipsum&quot;&gt;
+&lt;input placeholder=&quot;Lorem ipsum&quot; type=&quot;email&quot; value=&quot;&quot;&gt;
+&lt;input class=&quot;focus&quot; type=&quot;email&quot; value=&quot;Lorem ipsum&quot;&gt;</code></pre>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">type=&quot;url&quot;</h3>
+          <section class="docs-pattern_pattern">
+<input type="url" value="Lorem ipsum">
+<input placeholder="Lorem ipsum" type="url" value="">
+<input class="focus" type="url" value="Lorem ipsum">
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input type=&quot;url&quot; value=&quot;Lorem ipsum&quot;&gt;
+&lt;input placeholder=&quot;Lorem ipsum&quot; type=&quot;url&quot; value=&quot;&quot;&gt;
+&lt;input class=&quot;focus&quot; type=&quot;url&quot; value=&quot;Lorem ipsum&quot;&gt;</code></pre>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">type=&quot;tel&quot;</h3>
+          <section class="docs-pattern_pattern">
+<input type="tel" value="Lorem ipsum">
+<input placeholder="Lorem ipsum" type="tel" value="">
+<input class="focus" type="tel" value="Lorem ipsum">
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input type=&quot;tel&quot; value=&quot;Lorem ipsum&quot;&gt;
+&lt;input placeholder=&quot;Lorem ipsum&quot; type=&quot;tel&quot; value=&quot;&quot;&gt;
+&lt;input class=&quot;focus&quot; type=&quot;tel&quot; value=&quot;Lorem ipsum&quot;&gt;</code></pre>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">type=&quot;number&quot;</h3>
+          <section class="docs-pattern_pattern">
+<input type="number" value="1000">
+<input placeholder="Lorem ipsum" type="number" value="">
+<input class="focus" type="number" value="1000">
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input type=&quot;number&quot; value=&quot;1000&quot;&gt;
+&lt;input placeholder=&quot;Lorem ipsum&quot; type=&quot;number&quot; value=&quot;&quot;&gt;
+&lt;input class=&quot;focus&quot; type=&quot;number&quot; value=&quot;1000&quot;&gt;</code></pre>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">textarea</h3>
+          <section class="docs-pattern_pattern">
+<textarea>Lorem ipsum</textarea>
+<textarea class="focus">Lorem ipsum</textarea>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;textarea&gt;Lorem ipsum&lt;/textarea&gt;
+&lt;textarea class=&quot;focus&quot;&gt;Lorem ipsum&lt;/textarea&gt;</code></pre>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">multi-select</h3>
+          <section class="docs-pattern_pattern">
+<select multiple>
+    <option value="option1">Lorem</option>
+    <option value="option2">Ipsum</option>
+    <option value="option3">Dolor</option>
+    <option value="option4">Sit</option>
+</select>
+<select class="focus" multiple>
+    <option value="option1">Lorem</option>
+    <option value="option2">Ipsum</option>
+    <option value="option3">Dolor</option>
+    <option value="option4">Sit</option>
+</select>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;select multiple&gt;
+    &lt;option value=&quot;option1&quot;&gt;Lorem&lt;/option&gt;
+    &lt;option value=&quot;option2&quot;&gt;Ipsum&lt;/option&gt;
+    &lt;option value=&quot;option3&quot;&gt;Dolor&lt;/option&gt;
+    &lt;option value=&quot;option4&quot;&gt;Sit&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class=&quot;focus&quot; multiple&gt;
+    &lt;option value=&quot;option1&quot;&gt;Lorem&lt;/option&gt;
+    &lt;option value=&quot;option2&quot;&gt;Ipsum&lt;/option&gt;
+    &lt;option value=&quot;option3&quot;&gt;Dolor&lt;/option&gt;
+    &lt;option value=&quot;option4&quot;&gt;Sit&lt;/option&gt;
+&lt;/select&gt;</code></pre>
           </footer>
         </div>
       </div>
@@ -1417,10 +1502,11 @@ input[type=&quot;email&quot;],
 input[type=&quot;url&quot;],
 input[type=&quot;tel&quot;],
 input[type=&quot;number&quot;],
-textarea {
+textarea,
+select[multiple] {
   display: inline-block;
   margin: 0;
-  padding: 0.25em;
+  padding: 0.375em;
   font-family: Arial, sans-serif;
   font-size: 1em;
   background: #ffffff;
@@ -1429,6 +1515,9 @@ textarea {
   vertical-align: top;
   -webkit-appearance: none;
   -webkit-user-modify: read-write-plaintext-only;
+}
+::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 input[type=&quot;text&quot;]:focus,
 input[type=&quot;text&quot;].focus,
@@ -1443,44 +1532,23 @@ input[type=&quot;tel&quot;].focus,
 input[type=&quot;number&quot;]:focus,
 input[type=&quot;number&quot;].focus,
 textarea:focus,
-textarea.focus {
+textarea.focus,
+select[multiple]:focus,
+select[multiple].focus {
   border: 1px solid #0072ce;
-  border-color: #0072ce;
   outline: 1px solid #0072ce;
   outline-offset: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
-}</code></pre>
-      </div>
-    </div>
-    <div id="multiline-textarea" class="docs-component">
-      <h2 class="docs-component_header"><span>Multiline textarea</span></h2>
-      <div class="docs-patterns">
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Default multi-line text box</h3>
-          <section class="docs-pattern_pattern">
-<textarea>Example entry</textarea>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;textarea&gt;Example entry&lt;/textarea&gt;</code></pre>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Focused multi-line text box</h3>
-          <section class="docs-pattern_pattern">
-<textarea class="focus">Example entry</textarea>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;textarea class=&quot;focus&quot;&gt;Example entry&lt;/textarea&gt;</code></pre>
-          </footer>
-        </div>
-      </div>
-      <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">/* NOTE: all textarea styles extend input[type=&quot;text&quot;]. */
-textarea {
-  overflow: auto;
+}
+::-webkit-input-placeholder {
+  color: #75787b;
+}
+::-moz-placeholder {
+  color: #75787b;
+}
+:-ms-input-placeholder {
+  color: #75787b;
 }</code></pre>
       </div>
     </div>

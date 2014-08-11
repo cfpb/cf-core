@@ -540,12 +540,12 @@ blockquote {
 /* topdoc
     name: Form labels
     family: cf-core
+    notes:
+      - "Visit https://github.com/cfpb/cf-forms for advanced form label patterns."
     patterns:
     - name: Default label
-      notes:
-        - "Warning, this pattern is still under development."
       markup: |
-        <label>I am a form label</label>
+        <label>Form label</label>
     tags:
     - cf-core
 */
@@ -556,33 +556,61 @@ label {
 
 
 /* topdoc
-    name: Single-line text input
-    notes:
-      - Most other text-based inputs extend styles from here as seen in the CSS to the right.
+    name: Form elements
     family: cf-core
+    notes:
+      - "The .focus class is only included for documentation demos and should
+         not be used in production."
+      - "Visit https://github.com/cfpb/cf-forms for advanced form field patterns."
     patterns:
-    - name: Default single-line text input
+    - name: type="text"
       markup: |
-        <input placeholder="placeholder text" type="text" value=""><br><br>
-        <input placeholder="placeholder search text" type="search" value=""><br><br>
-        <input placeholder="placeholder email text" type="email" value=""><br><br>
-        <input placeholder="placeholder url text" type="url" value=""><br><br>
-        <input placeholder="placeholder tel text" type="tel" value=""><br><br>
-        <input placeholder="placeholder number text" type="number" value="">
-      notes:
-        - Note that break tag usage is being used for demo purposes only.
-          Please do not use them for visually separating inputs.
-    - name: Focused state
+        <input type="text" value="Lorem ipsum">
+        <input placeholder="Lorem ipsum" type="text" value="">
+        <input class="focus" type="text" value="Lorem ipsum">
+    - name: type="search"
       markup: |
-        <input class="focus" placeholder="placeholder text" type="text" value=""><br><br>
-        <input class="focus" placeholder="placeholder search text" type="search" value=""><br><br>
-        <input class="focus" placeholder="placeholder email text" type="email" value=""><br><br>
-        <input class="focus" placeholder="placeholder url text" type="url" value=""><br><br>
-        <input class="focus" placeholder="placeholder tel text" type="tel" value=""><br><br>
-        <input class="focus" placeholder="placeholder number text" type="number" value="">
-      notes:
-        - Note that break tag usage is being used for demo purposes only.
-          Please do not use them for visually separating inputs.
+        <input type="search" value="Lorem ipsum">
+        <input placeholder="Lorem ipsum" type="search" value="">
+        <input class="focus" type="search" value="Lorem ipsum">
+    - name: type="email"
+      markup: |
+        <input type="email" value="Lorem ipsum">
+        <input placeholder="Lorem ipsum" type="email" value="">
+        <input class="focus" type="email" value="Lorem ipsum">
+    - name: type="url"
+      markup: |
+        <input type="url" value="Lorem ipsum">
+        <input placeholder="Lorem ipsum" type="url" value="">
+        <input class="focus" type="url" value="Lorem ipsum">
+    - name: type="tel"
+      markup: |
+        <input type="tel" value="Lorem ipsum">
+        <input placeholder="Lorem ipsum" type="tel" value="">
+        <input class="focus" type="tel" value="Lorem ipsum">
+    - name: type="number"
+      markup: |
+        <input type="number" value="1000">
+        <input placeholder="Lorem ipsum" type="number" value="">
+        <input class="focus" type="number" value="1000">
+    - name: textarea
+      markup: |
+        <textarea>Lorem ipsum</textarea>
+        <textarea class="focus">Lorem ipsum</textarea>
+    - name: multi-select
+      markup: |
+        <select multiple>
+            <option value="option1">Lorem</option>
+            <option value="option2">Ipsum</option>
+            <option value="option3">Dolor</option>
+            <option value="option4">Sit</option>
+        </select>
+        <select class="focus" multiple>
+            <option value="option1">Lorem</option>
+            <option value="option2">Ipsum</option>
+            <option value="option3">Dolor</option>
+            <option value="option4">Sit</option>
+        </select>
     tags:
     - cf-core
 */
@@ -592,24 +620,32 @@ input[type="search"],
 input[type="email"],
 input[type="url"],
 input[type="tel"],
-input[type="number"] {
+input[type="number"],
+textarea,
+select[multiple] {
     @font-size: 16px;
 
     display: inline-block;
     margin: 0;
-    padding: unit( 4 / @base-font-size-px, em );
+    padding: unit(6 / @base-font-size-px, em);
     font-family: Arial, sans-serif;
-    font-size: unit( @font-size / @base-font-size-px, em );
+    font-size: unit(@font-size / @base-font-size-px, em);
     background: @white;
     border: 1px solid @gray;
-    -webkit-border-radius: 0;
-       -moz-border-radius: 0;
-            border-radius: 0;
+    border-radius: 0;
     vertical-align: top;
     -webkit-appearance: none;
     -webkit-user-modify: read-write-plaintext-only;
 }
 
+// Overrides extra left padding.
+// http://stackoverflow.com/questions/11127891/how-can-i-get-rid-of-horizontal-padding-or-indent-in-html5-search-inputs-in-webk
+::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+// The .focus class is only included for documentation demos and should not
+// be used in production.
 input[type="text"]:focus,
 input[type="text"].focus,
 input[type="search"]:focus,
@@ -621,42 +657,25 @@ input[type="url"].focus,
 input[type="tel"]:focus,
 input[type="tel"].focus,
 input[type="number"]:focus,
-input[type="number"].focus {
-    // Class included for static state examples
+input[type="number"].focus,
+textarea:focus,
+textarea.focus,
+select[multiple]:focus,
+select[multiple].focus {
     border: 1px solid @pacific;
-    border-color: @pacific;
     outline: 1px solid @pacific;
     outline-offset: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
 }
 
-
-/* topdoc
-    name: Multiline textarea
-    family: cf-core
-    patterns:
-    - name: Default multi-line text box
-      markup: |
-        <textarea>Example entry</textarea>
-    - name: Focused multi-line text box
-      markup: |
-        <textarea class="focus">Example entry</textarea>
-    tags:
-    - cf-core
-*/
-
-/* NOTE: all textarea styles extend input[type="text"]. */
-
-textarea {
-    &:extend(input[type="text"]);
-    overflow: auto; // http://css-tricks.com/textarea-tricks/
+::-webkit-input-placeholder {
+   color: @gray;
 }
-
-textarea:focus,
-textarea.focus {
-    // Class included for static state examples
-    &:extend(input[type="text"]:focus);
+::-moz-placeholder {
+   color: @gray;
+}
+:-ms-input-placeholder {
+   color: @gray;
 }
 
 
