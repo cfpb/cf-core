@@ -144,6 +144,20 @@ pre {
   border-radius: 0;
   background: transparent;
 }
+.docs-pattern_footer-edit {
+  position: relative;
+}
+.docs-pattern_footer-edit-btn {
+  position: absolute;
+  right: -2.3em;
+  bottom: 0;
+  border: 1px solid #e3e4e5;
+  border-top-left-radius: 3px;
+  background: transparent;
+  color: #75787b;
+  font-family: source-code-pro, 'Source Code Pro', Courier, monospace;
+  font-size: 10px;
+}
 /* Notes and code
    ========================================================================== */
 .docs-code {
