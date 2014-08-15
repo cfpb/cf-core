@@ -432,6 +432,149 @@ ul {
 
 
 /* topdoc
+  name: Tables
+  family: cf-core
+  patterns:
+    - name: Standard table
+      markup: |
+        <table>
+            <thead>
+                <tr>
+                    <th>Column 1 header</th>
+                    <th>Column 2 header</th>
+                    <th>Column 3 header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Row 1 header</th>
+                    <td>Row 1, column 2</td>
+                    <td>Row 1, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 2 header</th>
+                    <td>Row 2, column 2</td>
+                    <td>Row 2, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 3 header</th>
+                    <td>Row 3, column 2</td>
+                    <td>Row 3, column 3</td>
+                </tr>
+            </tbody>
+        </table>
+    - name: Compact table
+      markup: |
+        <table class="compact-table">
+            <thead>
+                <tr>
+                    <th>Column 1 header</th>
+                    <th>Column 2 header</th>
+                    <th>Column 3 header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Row 1 header</th>
+                    <td>Row 1, column 2</td>
+                    <td>Row 1, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 2 header</th>
+                    <td>Row 2, column 2</td>
+                    <td>Row 2, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 3 header</th>
+                    <td>Row 3, column 2</td>
+                    <td>Row 3, column 3</td>
+                </tr>
+            </tbody>
+        </table>
+      notes:
+        - Reduces cell padding to 10px.
+    - name: Interactive table
+      markup: |
+        <table class="interactive-table">
+            <thead>
+                <tr>
+                    <th>Column 1 header</th>
+                    <th>Column 2 header</th>
+                    <th>Column 3 header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Row 1 header</th>
+                    <td>Row 1, column 2</td>
+                    <td>Row 1, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 2 header</th>
+                    <td>Row 2, column 2</td>
+                    <td>Row 2, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 3 header</th>
+                    <td>Row 3, column 2</td>
+                    <td>Row 3, column 3</td>
+                </tr>
+            </tbody>
+        </table>
+      notes:
+        - Use the .interactive-table class for tables where entire rows should be clickable.
+  tags:
+    - cf-core
+*/
+
+table {
+    .webfont-regular();
+}
+
+th,
+td {
+    @font-size: 15px;
+
+    padding: unit(12px / @font-size, em) unit(15px / @font-size, em);
+    background: @gray-5;
+    font-size: @font-size;
+    line-height: unit(20px / @font-size);
+
+    thead & {
+        color: @white;
+        background: @darkgray;
+    }
+
+    tbody > tr:nth-child(odd) > & {
+        background: @gray-10;
+    }
+
+    .compact-table & {
+        padding: unit(8px / @font-size, em) unit(10px / @font-size, em);
+    }
+}
+
+th {
+    .webfont-demi();
+    text-align: left;
+}
+
+.interactive-table tbody th,
+.interactive-table tbody td,
+.interactive-table tbody > tr:nth-child(odd) > td,
+.interactive-table tbody > tr:nth-child(odd) > th {
+    background: @white;
+}
+.interactive-table tbody > tr {
+    border-bottom: 1px solid @gray-20;
+}
+.interactive-table tbody > tr:hover > td,
+.interactive-table tbody > tr:hover > th {
+    background: @green-midtone;
+}
+
+
+/* topdoc
   name: Block quote
   family: cf-core
   patterns:
