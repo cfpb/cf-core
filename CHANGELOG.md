@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.3.1 - 2014-09-02
+
+### Added
+- Nothing.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- .u-link__colors mixin now uses the same border targeting as normal links;
+  all borders instead of bottom borders.
+
+
 ## 0.3.0 - 2014-08-15
 
 ### Added
