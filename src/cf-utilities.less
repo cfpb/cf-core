@@ -272,12 +272,12 @@
     - codenotes:
         - .u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba);
       notes:
-        - "Allows you to color text and the bottom border separately."
+        - "Allows you to color text and the borders separately."
         - "The first five colors in 'love/hate' mnemonic order will color text
           for the :link, :visited, :hover, :focus, and :active states
           respectively. The last five colors in 'love/hate' mnemonic order will
-          color the bottom border for the :link, :visited, :hover, :focus, and
-          :active states respectively."
+          color the borders for the :link, :visited, :hover, :focus, and :active
+          states respectively."
         - "Even though this mixin is basically the same as
           .u-link__colors-base(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba); we
           encourage you to use .u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)
@@ -347,29 +347,29 @@
 .u-link__colors-base(@c:@pacific, @v:@teal, @h:@pacific-50, @f:@pacific, @a:@navy,
                      @bc:@pacific, @bv:@teal, @bh:@pacific-50, @bf:@pacific, @ba:@navy) {
     color: @c;
-    border-bottom-color: @bc;
+    border-color: @bc;
 
     &:visited,
     &.visited {
-        border-bottom-color: @bv;
+        border-color: @bv;
         color: @v;
     }
 
     &:hover,
     &.hover {
-        border-bottom-color: @bh;
+        border-color: @bh;
         color: @h;
     }
 
     &:focus,
     &.focus {
-        border-bottom-color: @bf;
+        border-color: @bf;
         color: @f;
     }
 
     &:active,
     &.active {
-        border-bottom-color: @ba;
+        border-color: @ba;
         color: @a;
     }
 }
