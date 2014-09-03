@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.3.2 - 2014-09-02
+
+### Added
+- Nothing.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Fixes horizontal margins for `<figure>` elements.
+
+
 ## 0.3.1 - 2014-09-02
 
 ### Added
