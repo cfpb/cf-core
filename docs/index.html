@@ -122,6 +122,50 @@ Compiles to:
         </div>
       </div>
     </div>
+    <div id="js-only" class="docs-component">
+      <h2 class="docs-component_header"><span>JS-only</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Setup</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>&lt;html class=&quot;no-js&quot;&gt;</code></pre>
+              </li>
+              <li>
+                <pre class="docs-code"><code>&lt;script&gt;
+    // Confirm availability of JS and remove no-js class from html
+    var docElement = document.documentElement;
+    docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+&lt;/script&gt;</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>First add the .no-js class to the HTML element.</li>
+              <li>Then add the script to your HEAD which removes the .no-js class when JS is available.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Utility class</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-js-only;</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Hide stuff when JavaScript isn't available. Depends on having a small script in the HEAD of your HTML document that removes a .no-js class.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.no-js .u-js-only {
+  display: none !important;
+}</code></pre>
+      </div>
+    </div>
     <div id="clearfix" class="docs-component">
       <h2 class="docs-component_header"><span>Clearfix</span></h2>
       <div class="docs-patterns">
@@ -130,15 +174,15 @@ Compiles to:
           <section class="docs-pattern_pattern">
 <div class="u-clearfix">
     <div style="float:left; width:100%; height:60px; background:black;"></div>
-</h1>
+</div>
 
           </section>
           <footer class="docs-pattern_footer">
             <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;u-clearfix&quot;&gt;
     &lt;div style=&quot;float:left; width:100%; height:60px; background:black;&quot;&gt;&lt;/div&gt;
-&lt;/h1&gt;</code></pre>
+&lt;/div&gt;</code></pre>
             <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-core/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;u-clearfix\&amp;quot;&gt;\n    &lt;div style=\&amp;quot;float:left; width:100%; height:60px; background:black;\&amp;quot;&gt;&lt;/div&gt;\n&lt;/h1&gt;\n&amp;quot;}">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-core/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;u-clearfix\&amp;quot;&gt;\n    &lt;div style=\&amp;quot;float:left; width:100%; height:60px; background:black;\&amp;quot;&gt;&lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
               <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
             </form>
             <ul class="docs-codenotes">
