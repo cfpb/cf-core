@@ -1755,10 +1755,66 @@ th {
             </form>
           </footer>
         </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Label wrapping a radio or checkbox</h3>
+          <section class="docs-pattern_pattern">
+<label>
+    <input type="radio">
+    Radio label
+</label>
+<label>
+    <input type="checkbox">
+    Checkbox label
+</label>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;label&gt;
+    &lt;input type=&quot;radio&quot;&gt;
+    Radio label
+&lt;/label&gt;
+&lt;label&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+    Checkbox label
+&lt;/label&gt;</code></pre>
+            <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-core/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;label&gt;\n    &lt;input type=\&amp;quot;radio\&amp;quot;&gt;\n    Radio label\n&lt;/label&gt;\n&lt;label&gt;\n    &lt;input type=\&amp;quot;checkbox\&amp;quot;&gt;\n    Checkbox label\n&lt;/label&gt;\n&amp;quot;}">
+              <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+            </form>
+          </footer>
+        </div>
       </div>
       <div class="docs-css">
         <pre class="docs-code"><code data-language="css">label {
   display: block;
+  margin-bottom: 0.3125em;
+  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+label em,
+label i {
+  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 label em,
+.lt-ie9 label i {
+  font-style: normal !important;
+}
+label strong,
+label b {
+  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 label strong,
+.lt-ie9 label b {
+  font-weight: normal !important;
+}
+label input[type=&quot;radio&quot;],
+label input[type=&quot;checkbox&quot;] {
+  margin-right: 0.375em;
 }</code></pre>
       </div>
     </div>

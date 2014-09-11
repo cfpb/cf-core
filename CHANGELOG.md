@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.5.0 - 2014-09-11
+
+### Added
+- Default font family for labels is now Avenir Regular.
+- Checkboxes and radios inside of labels now have default margins to separate
+  it from the label text.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Nothing.
+
+
 ## 0.4.0 - 2014-09-04
 
 ### Added

@@ -646,12 +646,30 @@ blockquote {
     - name: Default label
       markup: |
         <label>Form label</label>
+    - name: Label wrapping a radio or checkbox
+      markup: |
+        <label>
+            <input type="radio">
+            Radio label
+        </label>
+        <label>
+            <input type="checkbox">
+            Checkbox label
+        </label>
     tags:
     - cf-core
 */
 
 label {
     display: block;
+    // 5px is eyeballed to 10px when considering line height.
+    margin-bottom: unit(5px / @base-font-size-px, em);
+    .webfont-regular();
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: unit(6px / @base-font-size-px, em);
+    }
 }
 
 
