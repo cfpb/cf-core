@@ -31,6 +31,12 @@
               <li>
                 <pre class="docs-code"><code>@base-line-height: unit(@base-line-height-px / @base-font-size-px);</code></pre>
               </li>
+              <li>
+                <pre class="docs-code"><code>@mobile-max: 599px;</code></pre>
+              </li>
+              <li>
+                <pre class="docs-code"><code>@tablet-min: 600px;</code></pre>
+              </li>
             </ul>
           </footer>
         </div>
@@ -821,6 +827,9 @@ Compiles to:
               <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-core/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;h1&gt;Example heading element&lt;/h1&gt;\n&lt;p class=\&amp;quot;h1\&amp;quot;&gt;A non-heading element&lt;/p&gt;\n&amp;quot;}">
               <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
             </form>
+            <ul class="docs-notes">
+              <li>Responsive header. At mobile sizes, displays as h2.</li>
+            </ul>
           </footer>
         </div>
         <div class="docs-pattern">
@@ -837,6 +846,9 @@ Compiles to:
               <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-core/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;h2&gt;Example heading element&lt;/h2&gt;\n&lt;p class=\&amp;quot;h2\&amp;quot;&gt;A non-heading element&lt;/p&gt;\n&amp;quot;}">
               <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
             </form>
+            <ul class="docs-notes">
+              <li>Responsive header. At mobile sizes, displays as h3.</li>
+            </ul>
           </footer>
         </div>
         <div class="docs-pattern">
@@ -853,6 +865,9 @@ Compiles to:
               <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-core/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;h3&gt;Example heading element&lt;/h3&gt;\n&lt;p class=\&amp;quot;h3\&amp;quot;&gt;A non-heading element&lt;/p&gt;\n&amp;quot;}">
               <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
             </form>
+            <ul class="docs-notes">
+              <li>Responsive header. At mobile sizes, displays as h4.</li>
+            </ul>
           </footer>
         </div>
         <div class="docs-pattern">
@@ -1004,24 +1019,192 @@ h1,
   font-size: 2.125em;
   line-height: 1.29411765;
 }
+@media only all and (max-width: 37.4375em) {
+  h1,
+  .h1 {
+    font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0.73076923em;
+    font-size: 1.625em;
+    line-height: 1.26923077;
+  }
+  h1 em,
+  .h1 em,
+  h1 i,
+  .h1 i {
+    font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+  }
+  .lt-ie9 h1 em,
+  .lt-ie9 .h1 em,
+  .lt-ie9 h1 i,
+  .lt-ie9 .h1 i {
+    font-style: normal !important;
+  }
+  h1 strong,
+  .h1 strong,
+  h1 b,
+  .h1 b {
+    font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .lt-ie9 h1 strong,
+  .lt-ie9 .h1 strong,
+  .lt-ie9 h1 b,
+  .lt-ie9 .h1 b {
+    font-weight: normal !important;
+  }
+}
+@media only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) {
+  h1,
+  .h1 {
+    font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0.95454545em;
+    font-size: 1.375em;
+    line-height: 1.27272727;
+  }
+  h1 em,
+  .h1 em,
+  h1 i,
+  .h1 i {
+    font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+  }
+  .lt-ie9 h1 em,
+  .lt-ie9 .h1 em,
+  .lt-ie9 h1 i,
+  .lt-ie9 .h1 i {
+    font-style: normal !important;
+  }
+  h1 strong,
+  .h1 strong,
+  h1 b,
+  .h1 b {
+    font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .lt-ie9 h1 strong,
+  .lt-ie9 .h1 strong,
+  .lt-ie9 h1 b,
+  .lt-ie9 .h1 b {
+    font-weight: normal !important;
+  }
+}
+@media only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) {
+  h1,
+  .h1 {
+    margin-top: 0;
+    margin-bottom: 1.16666667em;
+    font-size: 1.125em;
+    font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.22222222;
+  }
+  .lt-ie9 h1,
+  .lt-ie9 .h1 {
+    font-weight: normal !important;
+  }
+}
 h2,
 .h2 {
   margin-top: 0;
-  margin-bottom: 0.30769231em;
+  margin-bottom: 0.73076923em;
   font-size: 1.625em;
   line-height: 1.26923077;
+}
+@media only all and (max-width: 37.4375em) {
+  h2,
+  .h2 {
+    font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0.95454545em;
+    font-size: 1.375em;
+    line-height: 1.27272727;
+  }
+  h2 em,
+  .h2 em,
+  h2 i,
+  .h2 i {
+    font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+  }
+  .lt-ie9 h2 em,
+  .lt-ie9 .h2 em,
+  .lt-ie9 h2 i,
+  .lt-ie9 .h2 i {
+    font-style: normal !important;
+  }
+  h2 strong,
+  .h2 strong,
+  h2 b,
+  .h2 b {
+    font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .lt-ie9 h2 strong,
+  .lt-ie9 .h2 strong,
+  .lt-ie9 h2 b,
+  .lt-ie9 .h2 b {
+    font-weight: normal !important;
+  }
+}
+@media only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) {
+  h2,
+  .h2 {
+    margin-top: 0;
+    margin-bottom: 1.16666667em;
+    font-size: 1.125em;
+    font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.22222222;
+  }
+  .lt-ie9 h2,
+  .lt-ie9 .h2 {
+    font-weight: normal !important;
+  }
 }
 h3,
 .h3 {
   margin-top: 0;
-  margin-bottom: 0.22727273em;
+  margin-bottom: 0.95454545em;
   font-size: 1.375em;
   line-height: 1.27272727;
+}
+@media only all and (max-width: 37.4375em) {
+  h3,
+  .h3 {
+    margin-top: 0;
+    margin-bottom: 1.16666667em;
+    font-size: 1.125em;
+    font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.22222222;
+  }
+  .lt-ie9 h3,
+  .lt-ie9 .h3 {
+    font-weight: normal !important;
+  }
 }
 h4,
 .h4 {
   margin-top: 0;
-  margin-bottom: 0.27777778em;
+  margin-bottom: 1.16666667em;
   font-size: 1.125em;
   font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
   font-style: normal;
@@ -1729,7 +1912,7 @@ th {
   font-style: normal;
   font-weight: normal;
   margin-top: 0;
-  margin-bottom: 0.22727273em;
+  margin-bottom: 0.95454545em;
   font-size: 1.375em;
   line-height: 1.27272727;
   margin-bottom: 0.54545455em;
@@ -1755,6 +1938,20 @@ th {
 .lt-ie9 .pull-quote_body b {
   font-weight: normal !important;
 }
+@media only all and (max-width: 37.4375em) {
+  .pull-quote_body {
+    margin-top: 0;
+    margin-bottom: 1.16666667em;
+    font-size: 1.125em;
+    font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.22222222;
+  }
+  .lt-ie9 .pull-quote_body {
+    font-weight: normal !important;
+  }
+}
 .pull-quote_citation {
   font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
   font-style: normal;
@@ -1775,7 +1972,7 @@ th {
   font-style: normal;
   font-weight: normal;
   margin-top: 0;
-  margin-bottom: 0.30769231em;
+  margin-bottom: 0.73076923em;
   font-size: 1.625em;
   line-height: 1.26923077;
   margin-bottom: 0.69230769em;
@@ -1799,6 +1996,51 @@ th {
 .lt-ie9 .pull-quote__large .pull-quote_body strong,
 .lt-ie9 .pull-quote__large .pull-quote_body b {
   font-weight: normal !important;
+}
+@media only all and (max-width: 37.4375em) {
+  .pull-quote__large .pull-quote_body {
+    font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0.95454545em;
+    font-size: 1.375em;
+    line-height: 1.27272727;
+  }
+  .pull-quote__large .pull-quote_body em,
+  .pull-quote__large .pull-quote_body i {
+    font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+  }
+  .lt-ie9 .pull-quote__large .pull-quote_body em,
+  .lt-ie9 .pull-quote__large .pull-quote_body i {
+    font-style: normal !important;
+  }
+  .pull-quote__large .pull-quote_body strong,
+  .pull-quote__large .pull-quote_body b {
+    font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .lt-ie9 .pull-quote__large .pull-quote_body strong,
+  .lt-ie9 .pull-quote__large .pull-quote_body b {
+    font-weight: normal !important;
+  }
+}
+@media only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) {
+  .pull-quote__large .pull-quote_body {
+    margin-top: 0;
+    margin-bottom: 1.16666667em;
+    font-size: 1.125em;
+    font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.22222222;
+  }
+  .lt-ie9 .pull-quote__large .pull-quote_body {
+    font-weight: normal !important;
+  }
 }</code></pre>
       </div>
     </div>

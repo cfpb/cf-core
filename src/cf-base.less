@@ -98,14 +98,20 @@
       markup: |
         <h1>Example heading element</h1>
         <p class="h1">A non-heading element</p>
+      notes:
+        - Responsive header. At mobile sizes, displays as h2.
     - name: Heading level 2
       markup: |
         <h2>Example heading element</h2>
         <p class="h2">A non-heading element</p>
+      notes:
+        - Responsive header. At mobile sizes, displays as h3.
     - name: Heading level 3
       markup: |
         <h3>Example heading element</h3>
         <p class="h3">A non-heading element</p>
+      notes:
+        - Responsive header. At mobile sizes, displays as h4.
     - name: Heading level 4
       markup: |
         <h4>Example heading element</h4>
@@ -153,6 +159,10 @@ h1,
     margin-bottom: unit( 16px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
     line-height: unit( @line-height / @font-size );
+    
+    .respond-to-max(@mobile-max, {
+        .h2();
+    });
 }
 
 h2,
@@ -162,10 +172,14 @@ h2,
 
     margin-top: 0;
     // Spacing in the design manual is based off of the baseline so this margin
-    // number has been eyeballed to be 20px.
-    margin-bottom: unit( 8px / @font-size, em );
+    // number has been eyeballed to be 30px.
+    margin-bottom: unit( 19px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
     line-height: unit( @line-height / @font-size );
+    
+    .respond-to-max(@mobile-max, {
+        .h3();
+    });
 }
 
 h3,
@@ -175,10 +189,14 @@ h3,
 
     margin-top: 0;
     // Spacing in the design manual is based off of the baseline so this margin
-    // number has been eyeballed to be 15px.
-    margin-bottom: unit( 5px / @font-size, em );
+    // number has been eyeballed to be 30px.
+    margin-bottom: unit( 21px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
     line-height: unit( @line-height / @font-size );
+    
+    .respond-to-max(@mobile-max, {
+        .h4();
+    });
 }
 
 h4,
@@ -187,8 +205,8 @@ h4,
 
     margin-top: 0;
     // Spacing in the design manual is based off of the baseline so this margin
-    // number has been eyeballed to be 15px.
-    margin-bottom: unit( 5px / @font-size, em );
+    // number has been eyeballed to be 30px.
+    margin-bottom: unit( 21px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
     .webfont-medium();
     line-height: unit( @base-line-height-px / @font-size );
@@ -227,6 +245,7 @@ h6,
     font-size: unit( @font-size / @base-font-size-px, em );
     line-height: unit( @base-line-height-px / @font-size );
 }
+
 
 .superheader {
     // For when you want a heading that's bigger than a normal H1
