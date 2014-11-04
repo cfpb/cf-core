@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.6.0 - 2014-11-04
+
+### Added
+- Set `max-width` for all `img` elements to 100%.
+- Top and bottom margin utility classes.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Nothing.
+
+
 ## 0.5.0 - 2014-09-11
 
 ### Added
