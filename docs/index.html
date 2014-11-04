@@ -689,6 +689,75 @@ Compiles to:
         </div>
       </div>
     </div>
+    <div id="margin-utilities" class="docs-component">
+      <h2 class="docs-component_header"><span>Margin utilities</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Utility classes</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.u-m&lt;p&gt;&lt;#&gt;;</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Replace &lt;p&gt; with the first letter of the position ('t' for top or 'b' for bottom) and &lt;#&gt; with the pixel value of the margin you want.</li>
+              <li>Available values: 0, 5, 10, 15, 20, 30, 45, 60.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.u-mt0 {
+  margin-top: 0 !important;
+}
+.u-mb0 {
+  margin-bottom: 0 !important;
+}
+.u-mt5 {
+  margin-top: 5px !important;
+}
+.u-mb5 {
+  margin-bottom: 5px !important;
+}
+.u-mt10 {
+  margin-top: 10px !important;
+}
+.u-mb10 {
+  margin-bottom: 10px !important;
+}
+.u-mt15 {
+  margin-top: 15px !important;
+}
+.u-mb15 {
+  margin-bottom: 15px !important;
+}
+.u-mt20 {
+  margin-top: 20px !important;
+}
+.u-mb20 {
+  margin-bottom: 20px !important;
+}
+.u-mt30 {
+  margin-top: 30px !important;
+}
+.u-mb30 {
+  margin-bottom: 30px !important;
+}
+.u-mt45 {
+  margin-top: 45px !important;
+}
+.u-mb45 {
+  margin-bottom: 45px !important;
+}
+.u-mt60 {
+  margin-top: 60px !important;
+}
+.u-mb60 {
+  margin-bottom: 60px !important;
+}</code></pre>
+      </div>
+    </div>
     <div id="webfonts" class="docs-component">
       <h2 class="docs-component_header"><span>Webfonts</span></h2>
       <div class="docs-patterns">
@@ -1034,7 +1103,7 @@ h1,
   h1,
   .h1 {
     margin-top: 0;
-    margin-bottom: 1.27777778em;
+    margin-bottom: 1.16666667em;
     font-size: 1.125em;
     font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
     font-style: normal;
@@ -1097,7 +1166,7 @@ h2,
   h2,
   .h2 {
     margin-top: 0;
-    margin-bottom: 1.27777778em;
+    margin-bottom: 1.16666667em;
     font-size: 1.125em;
     font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
     font-style: normal;
@@ -1120,7 +1189,7 @@ h3,
   h3,
   .h3 {
     margin-top: 0;
-    margin-bottom: 1.27777778em;
+    margin-bottom: 1.16666667em;
     font-size: 1.125em;
     font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
     font-style: normal;
@@ -1135,7 +1204,7 @@ h3,
 h4,
 .h4 {
   margin-top: 0;
-  margin-bottom: 1.27777778em;
+  margin-bottom: 1.16666667em;
   font-size: 1.125em;
   font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
   font-style: normal;
@@ -1872,7 +1941,7 @@ th {
 @media only all and (max-width: 37.4375em) {
   .pull-quote_body {
     margin-top: 0;
-    margin-bottom: 1.27777778em;
+    margin-bottom: 1.16666667em;
     font-size: 1.125em;
     font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
     font-style: normal;
@@ -1962,7 +2031,7 @@ th {
 @media only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) {
   .pull-quote__large .pull-quote_body {
     margin-top: 0;
-    margin-bottom: 1.27777778em;
+    margin-bottom: 1.16666667em;
     font-size: 1.125em;
     font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
     font-style: normal;
@@ -2284,6 +2353,33 @@ select[multiple].focus {
 }
 :-ms-input-placeholder {
   color: #75787b;
+}</code></pre>
+      </div>
+    </div>
+    <div id="images" class="docs-component">
+      <h2 class="docs-component_header"><span>Images</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">max-width</h3>
+          <section class="docs-pattern_pattern">
+<img src="http://placekitten.com/800/40" alt="">
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;img src=&quot;http://placekitten.com/800/40&quot; alt=&quot;&quot;&gt;</code></pre>
+            <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-core/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;img src=\&amp;quot;http://placekitten.com/800/40\&amp;quot; alt=\&amp;quot;\&amp;quot;&gt;\n&amp;quot;}">
+              <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+            </form>
+            <ul class="docs-notes">
+              <li>Gives all images a default max-width of 100% of their container.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">img {
+  max-width: 100%;
 }</code></pre>
       </div>
     </div>
