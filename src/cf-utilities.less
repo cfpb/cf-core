@@ -91,11 +91,11 @@
 */
 
 .u-visually-hidden {
-  position: absolute; 
-  overflow: hidden; 
-  clip: rect(0 0 0 0); 
-  height: 1px; width: 1px; 
-  margin: -1px; padding: 0; border: 0; 
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px; padding: 0; border: 0;
 }
 
 
@@ -287,7 +287,7 @@
 
 .u-flexible-container-mixin(@width: 16, @height: 9) {
     @ratio: (@height / @width) * 100;
- 
+
     position: relative;
     padding-bottom: ~"@{ratio}%";
     height: 0;
@@ -425,8 +425,11 @@
                      @bh: @link-underline-hover,
                      @bf: @link-underline,
                      @ba: @link-underline-active) {
-    color: @c;
-    border-color: @bc;
+    &,
+    &:link {
+        border-color: @bc;
+        color: @c;
+    }
 
     &:visited,
     &.visited {
