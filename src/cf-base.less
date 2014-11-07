@@ -251,7 +251,7 @@ h6,
     // For when you want a heading that's bigger than a normal H1
 
     @font-size: 48px;
-    @line-height: 66px;
+    @line-height: 60px;
 
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 30px.
@@ -285,11 +285,6 @@ figure {
     margin-top: 0;
     // Spacing has been eyeballed to be 30px from the baseline.
     margin-bottom: unit(20px / @base-font-size-px, em);
-}
-
-figure {
-    margin-left: 0;
-    margin-right: 0;
 }
 
 
@@ -831,6 +826,73 @@ select[multiple].focus {
 
 img {
     max-width: 100%;
+}
+
+
+/* topdoc
+  name: Figure
+  family: cf-core
+  patterns:
+    - name: figure.figure__bordered
+      markup: |
+        <figure class="figure__bordered">
+            <img src="http://placekitten.com/300/300">
+        </figure>
+  tags:
+    - cf-core
+*/
+
+figure {
+    margin-left: 0;
+    margin-right: 0;
+    
+    img {
+        // Removes weird vertical spacing below images.
+        vertical-align: middle;
+    }
+}
+
+.figure__bordered img {
+    border: 1px solid @gray-50;
+}
+
+
+/* topdoc
+  name: Branded list modifier
+  family: cf-core
+  patterns:
+    - name: Branded list
+      markup: |
+        <ul class="list__branded">
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ul>
+      codenotes:
+        - ".list__branded"
+      notes:
+        - "List that uses brand-color bullets"
+  tags:
+    - cf-core
+*/
+
+.list__branded {
+
+    li {
+        position: relative;
+        list-style-type: none;
+        padding-bottom: unit(12px / @base-font-size-px, em);
+        
+        &:before {
+            @font-size: unit(22px / @base-font-size-px, em );
+            content: "\25AA";
+            position: absolute;
+            color: @green;
+            font-size: @font-size;
+            line-height: 1;
+            left: unit((-19px/@base-font-size-px) / @font-size, em);
+        }
+    }
 }
 
 

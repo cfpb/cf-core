@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 0.8.0 - 2014-11-07
+
+### Added
+- Figure image enhancements.
+- Superheader line height reduction
+- Small text utility
+- Hide/show on mobile utility classes
+- Percentage width utility classes
+- List with brand-color bullets
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Nothing.
 
 ## 0.7.0 - 2014-11-04
 
