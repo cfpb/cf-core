@@ -287,11 +287,6 @@ figure {
     margin-bottom: unit(20px / @base-font-size-px, em);
 }
 
-figure {
-    margin-left: 0;
-    margin-right: 0;
-}
-
 
 /* topdoc
   name: Default link
@@ -833,8 +828,9 @@ img {
     max-width: 100%;
 }
 
+
 /* topdoc
-  name: Figure updates
+  name: Figure
   family: cf-core
   patterns:
     - name: figure.figure__bordered
@@ -846,14 +842,20 @@ img {
     - cf-core
 */
 
-figure img {
-    // Removes weird vertical spacing below images.
-    vertical-align: middle;
+figure {
+    margin-left: 0;
+    margin-right: 0;
+    
+    img {
+        // Removes weird vertical spacing below images.
+        vertical-align: middle;
+    }
 }
 
 .figure__bordered img {
     border: 1px solid @gray-50;
 }
+
 
 /* topdoc
   name: Branded list modifier
