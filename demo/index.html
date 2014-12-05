@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html class="lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html class="lt-ie9"><![endif]-->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
 
 <!--[if gt IE 8]><!-->
-<html lang="en">
+<html lang="en" class="no-js">
   <!-- <![endif]-->
   <head>
     <meta charset="utf-8">
@@ -14,6 +14,12 @@
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
 <!--[if lt IE 9]>
     <script src="static/demo/html5shiv-printshiv.js"></script><![endif]-->
+    <script>
+      // Confirm availability of JS and remove no-js class from html
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+      
+    </script>
   </head>
   <body style="padding:4px;">
     <div id="less-variables">
@@ -624,7 +630,7 @@ Lorem ipsum<br>
 </div><br>
       </div>
     </div>
-    <div id="figure-updates">
+    <div id="figure">
       <div>
         <div>
 <figure class="figure__bordered">
