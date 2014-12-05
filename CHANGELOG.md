@@ -6,7 +6,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 ## 0.8.1 - 2014-12-05
 
 ### Added
-- Updated f-component-demo dev dependency to 0.9.0
+- Updated cf-component-demo dev dependency to 0.9.0
 
 ### Deprecated
 - Nothing.
