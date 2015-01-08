@@ -17,6 +17,20 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 ### Added
 - pa11y accessibility tests running in Travis.
 
+## 2.0.0 - 2015-07-02
+
+### Changed
+- **Breaking design change:**
+
+  Underlining of links in text is now done via `linear-gradient` instead of
+  `border-bottom`, when Modernizr detects CSS gradient support.
+  If gradients are not supported, links will fall back to standard
+  `text-decoration: underline;`.
+
+  Any project-specific styles that modified or were affected by the previous
+  border-based underlines will likely need to be adjusted.
+
+
 ## 0.11.0 - 2015-05-13
 
 ### Added

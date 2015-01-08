@@ -305,8 +305,8 @@ figure {
 /* topdoc
   name: Default link
   notes:
-    - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not
-      be used in production."
+    - "Note that the .visited, .hover, .focus, .active classes are for
+       demonstration purposes only and should not be used in production."
   family: cf-core
   patterns:
     - name: Default state
@@ -329,37 +329,55 @@ figure {
 */
 
 a {
-    // border-width: 0;
-    // border-style: dotted;
-    // border-color: @link-underline;
     color: @link-text;
     text-decoration: none;
 
+    .cssgradients & {
+        background-image: linear-gradient(to right, fade(@link-underline, 50%) 2px, transparent 2px);
+        background-size: 0 0;
+        background-repeat: repeat-x;
+        background-position: 0 1.0625em;
+    }
+
     &:visited,
     &.visited {
-        // border-color: @link-underline-visited;
         color: @link-text-visited;
+
+        .cssgradients & {
+            background-image: linear-gradient(to right, fade(@link-underline-visited, 50%) 2px, transparent 2px);
+        }
     }
 
     &:hover,
     &.hover {
-        // border-style: solid;
-        // border-color: @link-underline-hover;
         color: @link-text-hover;
+
+        .cssgradients & {
+            background-image: linear-gradient(to right, fade(@link-underline-hover, 50%) 2px, transparent 2px);
+        }
     }
 
     &:focus,
     &.focus {
-        // border-style: solid;
         outline: thin dotted;
     }
 
     &:active,
     &.active {
-        // border-style: solid;
-        // border-color: @link-underline-active;
         color: @link-text-active;
+
+        .cssgradients & {
+            background-image: linear-gradient(to right, fade(@link-underline-active, 50%) 2px, transparent 2px);
+        }
     }
+}
+
+// To be documented: mixin for simulating underlines that break around descenders
+.breaking-underlines(@background-color) {
+    text-shadow: -1px -1px 0 @background-color,
+                  1px -1px 0 @background-color,
+                 -1px  1px 0 @background-color,
+                  1px  1px 0 @background-color;
 }
 
 
@@ -431,16 +449,24 @@ a {
 p,
 li,
 dd {
-    // Restrict bottom borders to inline text links ...
-
+    // Restrict underlines to inline text links ...
     a {
-        // border-bottom-width: 1px;
+        text-decoration: underline;
+
+        .cssgradients & {
+            background-size: (2px + 2px) 2px;
+            text-decoration: none;
+        }
     }
 }
 
 nav a {
     // ... unless they're part of a nav list
-    // border-bottom-width: 0;
+    text-decoration: none;
+
+    .cssgradients & {
+        background-size: 0 0;
+    }
 }
 
 
