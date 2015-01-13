@@ -328,15 +328,19 @@ figure {
     - cf-core
 */
 
+@dot-width: 2px;
+@dot-height: 2px;
+@spacing: 2px;
+
 a {
     color: @link-text;
     text-decoration: none;
 
     .cssgradients & {
-        background-image: linear-gradient(to right, fade(@link-underline, 50%) 2px, transparent 2px);
-        background-size: 0 0;
+        background-image: linear-gradient(to right, fade(@link-underline, 50%) @dot-width, transparent @spacing);
         background-repeat: repeat-x;
         background-position: 0 1.0625em;
+        background-size: 0;
     }
 
     &:visited,
@@ -344,7 +348,7 @@ a {
         color: @link-text-visited;
 
         .cssgradients & {
-            background-image: linear-gradient(to right, fade(@link-underline-visited, 50%) 2px, transparent 2px);
+            background-image: linear-gradient(to right, fade(@link-underline-visited, 50%) @dot-width, transparent @spacing);
         }
     }
 
@@ -353,13 +357,17 @@ a {
         color: @link-text-hover;
 
         .cssgradients & {
-            background-image: linear-gradient(to right, fade(@link-underline-hover, 50%) 2px, transparent 2px);
+            background-image: linear-gradient(to right, fade(@link-underline-hover, 50%) @dot-width);
         }
     }
 
     &:focus,
     &.focus {
         outline: thin dotted;
+
+        .cssgradients & {
+            background-size: 0;
+        }
     }
 
     &:active,
@@ -367,17 +375,9 @@ a {
         color: @link-text-active;
 
         .cssgradients & {
-            background-image: linear-gradient(to right, fade(@link-underline-active, 50%) 2px, transparent 2px);
+            background-image: linear-gradient(to right, fade(@link-underline-active, 50%) @dot-width, transparent @spacing);
         }
     }
-}
-
-// To be documented: mixin for simulating underlines that break around descenders
-.breaking-underlines(@background-color) {
-    text-shadow: -1px -1px 0 @background-color,
-                  1px -1px 0 @background-color,
-                 -1px  1px 0 @background-color,
-                  1px  1px 0 @background-color;
 }
 
 
@@ -387,10 +387,11 @@ a {
   patterns:
     - name: States
       notes:
-        - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not
-          be used in production."
+        - "Note that the .visited, .hover, .focus, .active classes are for
+           demonstration purposes only and should not be used in production."
         - "The underline style properties are mostly set above in the a tag.
-          To enable the underline simply set a bottom-border-width as done here."
+           To enable the underline, simply set the background-size (and
+           text-decoration fallback) as done here."
       markup: |
         <p>
             <a href="#">Default</a>,
@@ -401,7 +402,7 @@ a {
         </p>
     - name: Underline conditions
       notes:
-        - "We're restricting link borders to links within p, li, and dd so that
+        - "We're restricting underlines to links within p, li, and dd so that
           we don't have to override them every time we want a plain link."
       markup: |
         <p>
@@ -454,7 +455,7 @@ dd {
         text-decoration: underline;
 
         .cssgradients & {
-            background-size: (2px + 2px) 2px;
+            background-size: (@dot-width + @spacing) @dot-height;
             text-decoration: none;
         }
     }
@@ -465,7 +466,7 @@ nav a {
     text-decoration: none;
 
     .cssgradients & {
-        background-size: 0 0;
+        background-size: 0;
     }
 }
 

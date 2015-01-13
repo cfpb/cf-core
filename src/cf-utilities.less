@@ -341,17 +341,17 @@
           .u-link__colors-base(@c, @v, @h, @f, @a); we encourage you to use
           .u-link__colors(@c, @v, @h, @f, @a) to promote consistency."
     - codenotes:
-        - .u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba);
+        - .u-link__colors(@c, @v, @h, @f, @a, @uc, @uv, @uh, @uf, @ua);
       notes:
-        - "Allows you to color text and the borders separately."
+        - "Allows you to color text and the underlines separately."
         - "The first five colors in 'love/hate' mnemonic order will color text
           for the :link, :visited, :hover, :focus, and :active states
           respectively. The last five colors in 'love/hate' mnemonic order will
-          color the borders for the :link, :visited, :hover, :focus, and :active
+          color the underlines for the :link, :visited, :hover, :focus, and :active
           states respectively."
         - "Even though this mixin is basically the same as
-          .u-link__colors-base(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba); we
-          encourage you to use .u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)
+          .u-link__colors-base(@c, @v, @h, @f, @a, @uc, @uv, @uh, @uf, @ua); we
+          encourage you to use .u-link__colors(@c, @v, @h, @f, @a, @uc, @uv, @uh, @uf, @ua)
           to promote consistency."
     - codenotes:
         - .u-link__colors-base(@c, @v, @h, @f, @a);
@@ -362,18 +362,18 @@
           project. Remember that if you need to set colors for all states of a
           link you should use .u-link__colors(@c, @v, @h, @f, @a)."
     - codenotes:
-        - .u-link__border();
+        - .u-link__underline();
       notes:
-        - "Forces the default bottom border on the :link and :hover states."
+        - "Forces the default underline on the :link and :hover states."
     - codenotes:
-        - .u-link__no-border();
+        - .u-link__no-underline();
       notes:
-        - "Turn off the default bottom border on the :link and :hover states."
+        - "Turn off the default underline on the :link and :hover states."
     - codenotes:
-        - .u-link__hover-border();
+        - .u-link__hover-underline();
       notes:
-        - "Turn off the default bottom border on the :link state and force a
-          bottom border on the :hover state."
+        - "Turn off the default underline on the :link state and force a
+          underline on the :hover state."
     - codenotes:
         - .u-link-child__hover();
       notes:
@@ -410,9 +410,9 @@
 }
 
 .u-link__colors(@c, @v, @h, @f, @a,
-                @bc, @bv, @bh, @bf, @ba) {
+                @uc, @uv, @uh, @uf, @ua) {
     .u-link__colors-base(@c, @v, @h, @f, @a,
-                         @bc, @bv, @bh, @bf, @ba);
+                         @uc, @uv, @uh, @uf, @ua);
 }
 
 .u-link__colors-base(@c:  @link-text,
@@ -420,38 +420,39 @@
                      @h:  @link-text-hover,
                      @f:  @link-text,
                      @a:  @link-text-active,
-                     @bc: @link-underline,
-                     @bv: @link-underline-visited,
-                     @bh: @link-underline-hover,
-                     @bf: @link-underline,
-                     @ba: @link-underline-active) {
+                     @uc: @link-underline,
+                     @uv: @link-underline-visited,
+                     @uh: @link-underline-hover,
+                     @uf: @link-underline,
+                     @ua: @link-underline-active) {
     &,
     &:link {
-        border-color: @bc;
+        background-image: linear-gradient(to right, @uc @dot-width, transparent @spacing);
         color: @c;
     }
 
     &:visited,
     &.visited {
-        border-color: @bv;
+        background-image: linear-gradient(to right, @uv @dot-width, transparent @spacing);
         color: @v;
     }
 
     &:hover,
     &.hover {
-        border-color: @bh;
+        border-color: @uh;
+        background-image: linear-gradient(to right, @uh @dot-width);
         color: @h;
     }
 
     &:focus,
     &.focus {
-        border-color: @bf;
+        background-image: linear-gradient(to right, @uf @dot-width, transparent @spacing);
         color: @f;
     }
 
     &:active,
     &.active {
-        border-color: @ba;
+        background-image: linear-gradient(to right, @ua @dot-width, transparent @spacing);
         color: @a;
     }
 }
@@ -465,28 +466,85 @@
     }
 }
 
-.u-link__border() {
-    border-bottom-width: 1px;
+.u-link__border,
+.u-link__underline {
+    text-decoration: underline;
 
-    &:hover,
-    &.hover {
-        border-bottom-width: 1px;
+    .cssgradients & {
+        background-size: 4px 2px;
+        text-decoration: none;
     }
 }
 
-.u-link__no-border() {
-    border-bottom-width: 0 !important;
+.u-link__no-border,
+.u-link__no-underline {
+    text-decoration: none !important;
+
+    .cssgradients & {
+        background-size: 0 0 !important;
+    }
 }
 
-.u-link__hover-border() {
-    border-bottom-width: 0 !important;
+.u-link__hover-border,
+.u-link__hover-underline {
+    text-decoration: none !important;
+
+    .cssgradients & {
+        background-size: 0 0 !important;
+    }
 
     &:hover,
     &.hover,
     &:focus,
     &.focus {
-        border-bottom-width: 1px !important;
+        text-decoration: underline !important;
+
+        .cssgradients & {
+            background-size: 4px 2px !important;
+            text-decoration: none !important;
+        }
     }
+}
+
+
+/* topdoc
+  name: Breaking link underlines mixin
+  family: cf-core
+  patterns:
+    - codenotes:
+        - .u-breaking-link-underlines(@background-color);
+      notes:
+        - "Add this mixin to a container to give all of its descendant links a
+           text shadow that simulates the effect of the link's underline
+           breaking around descenders."
+        - "The @background-color argument defaults to white, which is likely to
+           be the most common scenario. If tour text is on a different
+           background color, pass that color as a parameter to the mixin."
+        - "The .breaking-underline-demo class is for demonstration purposes
+           within these docs only. Do not use in your project."
+      markup: |
+        <p class="breaking-underline-demo">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore
+            <a href="#">magna aliqua</a>. Ut enim ad, minim veniam quis nostrud
+            exercitation ullamco laboris nisi ut
+            <i><a href="#">aliquip ex</a></i> ea commodo consequat.
+            Duis aute irure dolor in <b><a href="#">reprehenderit</a></b>
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+*/
+
+.u-breaking-link-underlines(@background-color: @white) {
+    a {
+        text-shadow: -1px -1px 0 @background-color,
+                      1px -1px 0 @background-color,
+                     -1px  1px 0 @background-color,
+                      1px  1px 0 @background-color;
+    }
+}
+
+.breaking-underline-demo {
+    .u-breaking-link-underlines();
 }
 
 
