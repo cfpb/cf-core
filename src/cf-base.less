@@ -133,9 +133,9 @@
 */
 
 body {
-    color: @black;
+    color: @text;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 100%;
+    font-size: unit(@base-font-size-px / 16 * 100, %);
     line-height: @base-line-height;
 }
 
@@ -317,21 +317,21 @@ figure {
 a {
     border-width: 0;
     border-style: dotted;
-    border-color: @pacific;
-    color: @pacific;
+    border-color: @link-underline;
+    color: @link-text;
     text-decoration: none;
 
     &:visited,
     &.visited {
-        border-color: @teal;
-        color: @teal;
+        border-color: @link-underline-visited;
+        color: @link-text-visited;
     }
 
     &:hover,
     &.hover {
         border-style: solid;
-        border-color: @pacific-50;
-        color: @pacific-50;
+        border-color: @link-underline-hover;
+        color: @link-text-hover;
     }
 
     &:focus,
@@ -343,8 +343,8 @@ a {
     &:active,
     &.active {
         border-style: solid;
-        border-color: @navy;
-        color: @navy;
+        border-color: @link-underline-active;
+        color: @link-text-active;
     }
 }
 
@@ -523,15 +523,15 @@ table {
 th,
 td {
     padding: unit(12px / @base-font-size-px, em) unit(15px / @base-font-size-px, em);
-    background: @gray-5;
+    background: @td-bg;
 
     thead & {
-        color: @white;
-        background: @darkgray;
+        color: @thead-text;
+        background: @thead-bg;
     }
 
     tbody > tr:nth-child(odd) > & {
-        background: @gray-10;
+        background: @td-bg-alt;
     }
 
     .compact-table & {
@@ -583,75 +583,6 @@ blockquote {
 
 
 /* topdoc
-  name: Pull quote
-  family: cf-core
-  patterns:
-    - name: Default pull quote
-      markup: |
-        <aside class="pull-quote">
-            <div class="pull-quote_body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum corrupti tempora nam nihil qui mollitia consectetur
-                corporis nemo culpa dolorum!
-            </div>
-            <footer>
-                <cite class="pull-quote_citation">
-                    - Author Name
-                </cite>
-            <footer>
-        </aside>
-      notes:
-        - "Use a pull quote to highlight excerpts from the current work.
-          This is not to be confused with blockquote which quotes from an
-          external work."
-        - "Since a pull quote is an excerpt and repeats content from the
-          article it's contained within you should use the aside element."
-    - name: Large pull quote
-      markup: |
-        <aside class="pull-quote pull-quote__large">
-            <div class="pull-quote_body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum corrupti tempora nam nihil qui mollitia consectetur
-                corporis nemo culpa dolorum!
-            </div>
-            <footer>
-                <cite class="pull-quote_citation">
-                    - Author Name
-                </cite>
-            <footer>
-        </aside>
-  tags:
-    - cf-core
-*/
-
-.pull-quote {
-
-    &_body {
-        .h3();
-        // Spacing is based off of the baseline so this margin number has been
-        // eyeballed to be ~24px.
-        margin-bottom: unit(12px / @font-size, em);
-        color: @black;
-    }
-
-    &_citation {
-        .h5();
-        color: @gray;
-    }
-}
-
-.pull-quote__large {
-
-    .pull-quote_body {
-        .h2();
-        // Spacing is based off of the baseline so this margin number has been
-        // eyeballed to be ~30px.
-        margin-bottom: unit(18px / @font-size, em);
-    }
-}
-
-
-/* topdoc
     name: Form labels
     family: cf-core
     notes:
@@ -698,33 +629,39 @@ label {
     - name: type="text"
       markup: |
         <input type="text" value="Lorem ipsum">
-        <input placeholder="Lorem ipsum" type="text" value="">
         <input class="focus" type="text" value="Lorem ipsum">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="text" value="">
     - name: type="search"
       markup: |
         <input type="search" value="Lorem ipsum">
-        <input placeholder="Lorem ipsum" type="search" value="">
         <input class="focus" type="search" value="Lorem ipsum">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="search" value="">
     - name: type="email"
       markup: |
         <input type="email" value="Lorem ipsum">
-        <input placeholder="Lorem ipsum" type="email" value="">
         <input class="focus" type="email" value="Lorem ipsum">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="email" value="">
     - name: type="url"
       markup: |
         <input type="url" value="Lorem ipsum">
-        <input placeholder="Lorem ipsum" type="url" value="">
         <input class="focus" type="url" value="Lorem ipsum">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="url" value="">
     - name: type="tel"
       markup: |
         <input type="tel" value="Lorem ipsum">
-        <input placeholder="Lorem ipsum" type="tel" value="">
         <input class="focus" type="tel" value="Lorem ipsum">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="tel" value="">
     - name: type="number"
       markup: |
         <input type="number" value="1000">
-        <input placeholder="Lorem ipsum" type="number" value="">
         <input class="focus" type="number" value="1000">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="number" value="">
     - name: textarea
       markup: |
         <textarea>Lorem ipsum</textarea>
@@ -762,8 +699,8 @@ select[multiple] {
     padding: unit(6 / @base-font-size-px, em);
     font-family: Arial, sans-serif;
     font-size: unit(@font-size / @base-font-size-px, em);
-    background: @white;
-    border: 1px solid @gray;
+    background: @input-bg;
+    border: 1px solid @input-border;
     border-radius: 0;
     vertical-align: top;
     -webkit-appearance: none;
@@ -794,20 +731,20 @@ textarea:focus,
 textarea.focus,
 select[multiple]:focus,
 select[multiple].focus {
-    border: 1px solid @pacific;
-    outline: 1px solid @pacific;
+    border: 1px solid @input-border-focus;
+    outline: 1px solid @input-border-focus;
     outline-offset: 0;
     box-shadow: none;
 }
 
 ::-webkit-input-placeholder {
-   color: @gray;
+   color: @input-placeholder;
 }
 ::-moz-placeholder {
-   color: @gray;
+   color: @input-placeholder;
 }
 :-ms-input-placeholder {
-   color: @gray;
+   color: @input-placeholder;
 }
 
 
@@ -833,10 +770,15 @@ img {
   name: Figure
   family: cf-core
   patterns:
+    - name: figure
+      markup: |
+        <figure>
+            <img src="http://placekitten.com/340/320">
+        </figure>
     - name: figure.figure__bordered
       markup: |
         <figure class="figure__bordered">
-            <img src="http://placekitten.com/300/300">
+            <img src="http://placekitten.com/340/320">
         </figure>
   tags:
     - cf-core
@@ -853,46 +795,7 @@ figure {
 }
 
 .figure__bordered img {
-    border: 1px solid @gray-50;
-}
-
-
-/* topdoc
-  name: Branded list modifier
-  family: cf-core
-  patterns:
-    - name: Branded list
-      markup: |
-        <ul class="list__branded">
-            <li>First item</li>
-            <li>Second item</li>
-            <li>Third item</li>
-        </ul>
-      codenotes:
-        - ".list__branded"
-      notes:
-        - "List that uses brand-color bullets"
-  tags:
-    - cf-core
-*/
-
-.list__branded {
-
-    li {
-        position: relative;
-        list-style-type: none;
-        padding-bottom: unit(12px / @base-font-size-px, em);
-        
-        &:before {
-            @font-size: unit(22px / @base-font-size-px, em );
-            content: "\25AA";
-            position: absolute;
-            color: @green;
-            font-size: @font-size;
-            line-height: 1;
-            left: unit((-19px/@base-font-size-px) / @font-size, em);
-        }
-    }
+    border: 1px solid @figure__bordered;
 }
 
 
