@@ -15,6 +15,9 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
   Background info on the new Capital Framework color variables can be found at
   <https://github.com/cfpb/capital-framework/issues/115>.
 
+### Removed
+- `cf-brand-colors.less`, see note above why it's no longer needed.
+
 ### Updated
 - NPM dependencies.
 
