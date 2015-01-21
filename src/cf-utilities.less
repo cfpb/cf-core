@@ -415,8 +415,16 @@
                          @bc, @bv, @bh, @bf, @ba);
 }
 
-.u-link__colors-base(@c:@pacific, @v:@teal, @h:@pacific-50, @f:@pacific, @a:@navy,
-                     @bc:@pacific, @bv:@teal, @bh:@pacific-50, @bf:@pacific, @ba:@navy) {
+.u-link__colors-base(@c:  @link-text,
+                     @v:  @link-text-visited,
+                     @h:  @link-text-hover,
+                     @f:  @link-text,
+                     @a:  @link-text-active,
+                     @bc: @link-underline,
+                     @bv: @link-underline-visited,
+                     @bh: @link-underline-hover,
+                     @bf: @link-underline,
+                     @ba: @link-underline-active) {
     color: @c;
     border-color: @bc;
 
@@ -445,7 +453,7 @@
     }
 }
 
-.u-link-child__hover(@c: @pacific-50) {
+.u-link-child__hover(@c: @link-text-hover) {
     a:hover &,
     a.hover &,
     a:focus &,
@@ -518,46 +526,46 @@
   patterns:
     - name: Percent-based
       markup: |
-        <div class="u-w100pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w100pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w100pct</code>
         </div>
-        <div class="u-w90pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w90pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w90pct</code>
         </div>
-        <div class="u-w80pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w80pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w80pct</code>
         </div>
-        <div class="u-w70pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w70pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w70pct</code>
         </div>
-        <div class="u-w60pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w60pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w60pct</code>
         </div>
-        <div class="u-w50pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w50pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w50pct</code>
         </div>
-        <div class="u-w40pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w40pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w40pct</code>
         </div>
-        <div class="u-w30pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w30pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w30pct</code>
         </div>
-        <div class="u-w20pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w20pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w20pct</code>
         </div>
-        <div class="u-w10pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w10pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w10pct</code>
         </div>
-        <div class="u-w75pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w75pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w75pct</code>
         </div>
-        <div class="u-w25pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w25pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w25pct</code>
         </div>
-        <div class="u-w66pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w66pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w66pct</code>
         </div>
-        <div class="u-w33pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w33pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w33pct</code>
         </div>
       notes:
