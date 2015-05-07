@@ -124,10 +124,14 @@
       markup: |
         <h6>Example heading element</h6>
         <p class="h6">A non-heading element</p>
+    - name: Subheader
+      markup: |
+        <h1 class="subheader">Example subheader that's kinda long</h1>
+        <p class="subheader">Example subheader that's kinda long</p>
     - name: Super header
       markup: |
-        <h1 class="superheader">Example super heading</h1>
-        <p class="superheader">Example super heading</p>
+        <h1 class="superheader">Example super header</h1>
+        <p class="superheader">Example super header</p>
   tags:
     - cf-core
 */
@@ -246,6 +250,19 @@ h6,
     line-height: unit( @base-line-height-px / @font-size );
 }
 
+.subheader {
+    // For longer subheaders that we don't want to be too large or heavier than
+    // the regular weight.
+    @font-size: 18px;
+
+    margin-top: 0;
+    // Spacing in the design manual is based off of the baseline so this margin
+    // number has been eyeballed to be 30px.
+    margin-bottom: unit( 21px / @font-size, em );
+    font-size: unit( @font-size / @base-font-size-px, em );
+    .webfont-regular();
+    line-height: unit( @base-line-height-px / @font-size );
+}
 
 .superheader {
     // For when you want a heading that's bigger than a normal H1
