@@ -1,5 +1,6 @@
 # cf-core
 
+[![Build Status](https://img.shields.io/travis/cfpb/cf-core.svg)](https://travis-ci.org/cfpb/cf-core) 
 [![Dependency Status](https://gemnasium.com/cfpb/cf-core.svg)](https://gemnasium.com/cfpb/cf-core)
 
 Core styles for starting a Capital Framework project.
