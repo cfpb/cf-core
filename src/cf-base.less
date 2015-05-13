@@ -8,7 +8,7 @@
   name: Webfonts
   family: cf-core
   patterns:
-    - name: Webfont mixins
+    - name: Webfont mixins and variables
       codenotes:
         - ".webfont-regular()"
         - ".webfont-italic()"
@@ -17,11 +17,13 @@
       notes:
         - "Use these mixins to easily add the your preferred font family to your
           elements."
+        - "To use your own fonts in the webfont mixins, set your own font with the
+          @webfont-regular/italic/medium/demi variables."
         - "To avoid faux bold and italics,
           you must use the font family name for that particular style.
           For example, when defining an italic in Helvetica
           you need to use the Helvetica Italic font family.
-          Same for bold. Use the mixins when setting bold or italic text as they also
+          Use the mixins when setting bold or italic text as they also
           set the appropriate font-weight and font-style."
         - "These mixins also add the appropriate .lt-ie9 overrides.
           .lt-ie9 overrides are necessary to override font-style and font-weight
@@ -33,8 +35,13 @@
     - cf-core
 */
 
+@webfont-regular: Arial;
+@webfont-italic: Arial;
+@webfont-medium: Arial;
+@webfont-demi: Arial;
+
 .webfont-regular() {
-    font-family: Arial, sans-serif;
+    font-family: @webfont-regular, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
 
@@ -50,7 +57,7 @@
 }
 
 .webfont-italic() {
-    font-family: Arial, sans-serif;
+    font-family: @webfont-italic, Arial, sans-serif;
     font-style: italic;
     font-weight: normal;
     .lt-ie9 & {
@@ -59,7 +66,7 @@
 }
 
 .webfont-medium() {
-    font-family: Arial, sans-serif;
+    font-family: @webfont-demi, Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     .lt-ie9 & {
@@ -68,7 +75,7 @@
 }
 
 .webfont-demi() {
-    font-family: Arial, sans-serif;
+    font-family: @webfont-medium, Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     .lt-ie9 & {
