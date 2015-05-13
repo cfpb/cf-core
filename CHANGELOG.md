@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.11.0 - 2015-05-13
+
+### Removed
+- Removing CFPB fonts. To add your own custom fonts,
+
+
 ## 0.10.0 - 2015-05-04
 
 ### Added

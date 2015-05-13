@@ -4,21 +4,10 @@
    ========================================================================== */
 
 
-@import (less) "licensed-fonts.css";
-
-
 /* topdoc
   name: Webfonts
   family: cf-core
   patterns:
-    - name: Licensed webfonts
-      notes:
-        - "Avenir Next is included via the licensed-fonts.css file.
-          This file contains absolute links to our paid font service.
-          Fonts included this way will only work on CFPB-registered domains."
-        - "Note that when using Avenir Regular we automatically fix faux italic
-          and bold issues by overriding i, em, b, and strong tags to use the
-          appropriate fonts."
     - name: Webfont mixins
       codenotes:
         - ".webfont-regular()"
@@ -26,12 +15,13 @@
         - ".webfont-medium()"
         - ".webfont-demi()"
       notes:
-        - "Use these mixins to easily add the Avenir Next font family to your
+        - "Use these mixins to easily add the your preferred font family to your
           elements."
-        - "To avoid faux bold and italics in Avenir Next, you must use the font
-          family name for that particular style. So when defining an italic or
-          bold style in Avenir Next you need to use the Avenir Next Italic font
-          family. Use the mixins when setting bold or italic text as they also
+        - "To avoid faux bold and italics,
+          you must use the font family name for that particular style.
+          For example, when defining an italic in Helvetica
+          you need to use the Helvetica Italic font family.
+          Same for bold. Use the mixins when setting bold or italic text as they also
           set the appropriate font-weight and font-style."
         - "These mixins also add the appropriate .lt-ie9 overrides.
           .lt-ie9 overrides are necessary to override font-style and font-weight
@@ -44,7 +34,7 @@
 */
 
 .webfont-regular() {
-    font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
 
@@ -60,7 +50,7 @@
 }
 
 .webfont-italic() {
-    font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-style: italic;
     font-weight: normal;
     .lt-ie9 & {
@@ -69,7 +59,7 @@
 }
 
 .webfont-medium() {
-    font-family: "AvenirNextLTW01-Medium", Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     .lt-ie9 & {
@@ -78,7 +68,7 @@
 }
 
 .webfont-demi() {
-    font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     .lt-ie9 & {
@@ -163,7 +153,7 @@ h1,
     margin-bottom: unit( 16px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
     line-height: unit( @line-height / @font-size );
-    
+
     .respond-to-max(@mobile-max, {
         .h2();
     });
@@ -180,7 +170,7 @@ h2,
     margin-bottom: unit( 19px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
     line-height: unit( @line-height / @font-size );
-    
+
     .respond-to-max(@mobile-max, {
         .h3();
     });
@@ -197,7 +187,7 @@ h3,
     margin-bottom: unit( 21px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
     line-height: unit( @line-height / @font-size );
-    
+
     .respond-to-max(@mobile-max, {
         .h4();
     });
@@ -308,7 +298,7 @@ figure {
 /* topdoc
   name: Default link
   notes:
-    - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+    - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not
       be used in production."
   family: cf-core
   patterns:
@@ -372,7 +362,7 @@ a {
   patterns:
     - name: States
       notes:
-        - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+        - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not
           be used in production."
         - "The underline style properties are mostly set above in the a tag.
           To enable the underline simply set a bottom-border-width as done here."
@@ -804,7 +794,7 @@ img {
 figure {
     margin-left: 0;
     margin-right: 0;
-    
+
     img {
         // Removes weird vertical spacing below images.
         vertical-align: middle;
