@@ -6,8 +6,11 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 ## 0.11.0 - 2015-05-13
 
+### Added
+- Added webfont variables to make it easy to override defaults in cf-theme-overrides.less
+
 ### Removed
-- Removing CFPB fonts. To add your own custom fonts,
+- Removing CFPB fonts. To add your own custom fonts, modify the `@webfont-regular/italic/medium/demi` mixins.
 
 
 ## 0.10.0 - 2015-05-04
