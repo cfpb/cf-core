@@ -1096,16 +1096,7 @@ small {
           <h2 class="docs-component_header"><span>Webfonts</span></h2>
           <div class="docs-patterns">
             <div class="docs-pattern">
-              <h3 class="docs-pattern_header">Licensed webfonts</h3>
-              <footer class="docs-pattern_footer">
-                <ul class="docs-notes">
-                  <li>Avenir Next is included via the licensed-fonts.css file. This file contains absolute links to our paid font service. Fonts included this way will only work on CFPB-registered domains.</li>
-                  <li>Note that when using Avenir Regular we automatically fix faux italic and bold issues by overriding i, em, b, and strong tags to use the appropriate fonts.</li>
-                </ul>
-              </footer>
-            </div>
-            <div class="docs-pattern">
-              <h3 class="docs-pattern_header">Webfont mixins</h3>
+              <h3 class="docs-pattern_header">Webfont mixins and variables</h3>
               <footer class="docs-pattern_footer">
                 <ul class="docs-codenotes">
                   <li>
@@ -1122,8 +1113,9 @@ small {
                   </li>
                 </ul>
                 <ul class="docs-notes">
-                  <li>Use these mixins to easily add the Avenir Next font family to your elements.</li>
-                  <li>To avoid faux bold and italics in Avenir Next, you must use the font family name for that particular style. So when defining an italic or bold style in Avenir Next you need to use the Avenir Next Italic font family. Use the mixins when setting bold or italic text as they also set the appropriate font-weight and font-style.</li>
+                  <li>Use these mixins to easily add the your preferred font family to your elements.</li>
+                  <li>To use your own fonts in the webfont mixins, set your own font with the @webfont-regular/italic/medium/demi variables.</li>
+                  <li>To avoid faux bold and italics, you must use the font family name for that particular style. For example, when defining an italic in Helvetica you need to use the Helvetica Italic font family. Use the mixins when setting bold or italic text as they also set the appropriate font-weight and font-style.</li>
                   <li>These mixins also add the appropriate .lt-ie9 overrides. .lt-ie9 overrides are necessary to override font-style and font-weight each time the webfont is used. These overrides are built into the webfont mixins so you get them automatically. Note that this requires you to use conditional classes on the &lt;html&gt; element: https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md#conditional-html-classes.</li>
                 </ul>
               </footer>
@@ -1298,7 +1290,7 @@ h2,
 .h2,
 h3,
 .h3 {
-  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
 }
@@ -1314,7 +1306,7 @@ h2 i,
 .h2 i,
 h3 i,
 .h3 i {
-  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: italic;
   font-weight: normal;
 }
@@ -1344,7 +1336,7 @@ h2 b,
 .h2 b,
 h3 b,
 .h3 b {
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
 }
@@ -1372,7 +1364,7 @@ h1,
 @media only all and (max-width: 37.4375em) {
   h1,
   .h1 {
-    font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
+    font-family: Arial, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     margin-top: 0;
@@ -1384,7 +1376,7 @@ h1,
   .h1 em,
   h1 i,
   .h1 i {
-    font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+    font-family: Arial, Arial, sans-serif;
     font-style: italic;
     font-weight: normal;
   }
@@ -1398,7 +1390,7 @@ h1,
   .h1 strong,
   h1 b,
   .h1 b {
-    font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+    font-family: Arial, Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
   }
@@ -1412,7 +1404,7 @@ h1,
 @media only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) {
   h1,
   .h1 {
-    font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
+    font-family: Arial, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     margin-top: 0;
@@ -1424,7 +1416,7 @@ h1,
   .h1 em,
   h1 i,
   .h1 i {
-    font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+    font-family: Arial, Arial, sans-serif;
     font-style: italic;
     font-weight: normal;
   }
@@ -1438,7 +1430,7 @@ h1,
   .h1 strong,
   h1 b,
   .h1 b {
-    font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+    font-family: Arial, Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
   }
@@ -1455,7 +1447,7 @@ h1,
     margin-top: 0;
     margin-bottom: 1.16666667em;
     font-size: 1.125em;
-    font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
+    font-family: Arial, Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     line-height: 1.22222222;
@@ -1475,7 +1467,7 @@ h2,
 @media only all and (max-width: 37.4375em) {
   h2,
   .h2 {
-    font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
+    font-family: Arial, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     margin-top: 0;
@@ -1487,7 +1479,7 @@ h2,
   .h2 em,
   h2 i,
   .h2 i {
-    font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+    font-family: Arial, Arial, sans-serif;
     font-style: italic;
     font-weight: normal;
   }
@@ -1501,7 +1493,7 @@ h2,
   .h2 strong,
   h2 b,
   .h2 b {
-    font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+    font-family: Arial, Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
   }
@@ -1518,7 +1510,7 @@ h2,
     margin-top: 0;
     margin-bottom: 1.16666667em;
     font-size: 1.125em;
-    font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
+    font-family: Arial, Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     line-height: 1.22222222;
@@ -1541,7 +1533,7 @@ h3,
     margin-top: 0;
     margin-bottom: 1.16666667em;
     font-size: 1.125em;
-    font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
+    font-family: Arial, Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     line-height: 1.22222222;
@@ -1556,7 +1548,7 @@ h4,
   margin-top: 0;
   margin-bottom: 1.16666667em;
   font-size: 1.125em;
-  font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: 1.22222222;
@@ -1569,7 +1561,7 @@ h5,
 h6,
 .h5,
 .h6 {
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   letter-spacing: 1px;
@@ -1599,14 +1591,14 @@ h6,
   margin-top: 0;
   margin-bottom: 1.16666667em;
   font-size: 1.125em;
-  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   line-height: 1.22222222;
 }
 .subheader em,
 .subheader i {
-  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: italic;
   font-weight: normal;
 }
@@ -1616,7 +1608,7 @@ h6,
 }
 .subheader strong,
 .subheader b {
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
 }
@@ -1627,7 +1619,7 @@ h6,
 .superheader {
   margin-bottom: 0.1875em;
   font-size: 3em;
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   line-height: 1.25;
@@ -1676,7 +1668,7 @@ figure {
           <h2 class="docs-component_header"><span>Default link</span></h2>
           <div class="docs-component_intro">
             <ul class="docs-notes">
-              <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not  be used in production.</li>
+              <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
             </ul>
           </div>
           <div class="docs-patterns">
@@ -1811,7 +1803,7 @@ a.active {
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-notes">
-                  <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not  be used in production.</li>
+                  <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
                   <li>The underline style properties are mostly set above in the a tag. To enable the underline simply set a bottom-border-width as done here.</li>
                 </ul>
               </footer>
@@ -2095,13 +2087,13 @@ nav a {
           </div>
           <div class="docs-css">
             <pre class="docs-code"><code data-language="css">table {
-  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
 }
 table em,
 table i {
-  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: italic;
   font-weight: normal;
 }
@@ -2111,7 +2103,7 @@ table i {
 }
 table strong,
 table b {
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
 }
@@ -2138,7 +2130,7 @@ tbody &gt; tr:nth-child(odd) &gt; td {
   padding: 0.4375em 0.625em;
 }
 th {
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   text-align: left;
@@ -2256,13 +2248,13 @@ th {
             <pre class="docs-code"><code data-language="css">label {
   display: block;
   margin-bottom: 0.3125em;
-  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
 }
 label em,
 label i {
-  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: italic;
   font-weight: normal;
 }
@@ -2272,7 +2264,7 @@ label i {
 }
 label strong,
 label b {
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
 }
