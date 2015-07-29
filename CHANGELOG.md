@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 1.0.2 - 2015-07-30
+- Fixed font-weight mixins that were using the reverse variables.
+
+## 1.0.1 - 2015-06-05
+- Moved @import rules to top of source file to make compilation cleaner.
+
+## 1.0.0 - 2015-06-01
+
+### Changed
+- Build process now uses @import statements instead of Grunt concatenation.
+
+### Added
+- pa11y accessibility tests running in Travis.
 
 ## 0.11.0 - 2015-05-13
 
