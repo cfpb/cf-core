@@ -12,8 +12,8 @@
     <title>cf-core demo</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
-<!--[if lt IE 9]>
-    <script src="static/demo/html5shiv-printshiv.js"></script><![endif]-->
+
+    <script src="static/js/modernizr-custom.js"></script>
   </head>
   <body style="padding:4px;">
     <div id="theme-variables">
@@ -176,6 +176,21 @@
       </div>
       <div>
         <div></div><br>
+      </div>
+    </div>
+    <div id="breaking-link-underlines-mixin">
+      <div>
+        <div>
+<p class="u-break-underlines">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore
+    <a href="#">magna aliqua</a>. Ut enim ad, minim veniam quis nostrud
+    exercitation ullamco laboris nisi ut
+    <i><a href="#">aliquip ex</a></i> ea commodo consequat.
+    Duis aute irure dolor in <b><a href="#">reprehenderit</a></b>
+    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+</p>
+</div><br>
       </div>
     </div>
     <div id="margin-utilities">
@@ -603,6 +618,22 @@ Lorem ipsum<br>
       </div>
     </div>
     <div id="figure">
+      <div>
+        <div>
+<figure>
+    <img src="http://placekitten.com/340/320">
+</figure>
+</div><br>
+      </div>
+      <div>
+        <div>
+<figure class="figure__bordered">
+    <img src="http://placekitten.com/340/320">
+</figure>
+</div><br>
+      </div>
+    </div>
+    <div id="selected-text">
       <div>
         <div>
 <figure>

@@ -457,6 +457,10 @@ dd {
         .cssgradients & {
             background-size: (@dot-width + @spacing) @dot-height;
             text-decoration: none;
+
+            &:before, &:after, *, *:before, *:after {
+                background-size: 0;
+            }
         }
     }
 }
@@ -837,6 +841,32 @@ figure {
 
 .figure__bordered img {
     border: 1px solid @figure__bordered;
+}
+
+
+/* topdoc
+  name: Selected text
+  family: cf-core
+  patterns:
+    - name: figure
+      markup: |
+        <figure>
+            <img src="http://placekitten.com/340/320">
+        </figure>
+    - name: figure.figure__bordered
+      markup: |
+        <figure class="figure__bordered">
+            <img src="http://placekitten.com/340/320">
+        </figure>
+  tags:
+    - cf-core
+*/
+
+*::selection {
+    background: @selection-bg;
+}
+*::-moz-selection {
+    background: @selection-bg;
 }
 
 

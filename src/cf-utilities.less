@@ -518,9 +518,9 @@
            text shadow that simulates the effect of the link's underline
            breaking around descenders."
         - "The @background-color argument defaults to white, which is likely to
-           be the most common scenario. If tour text is on a different
+           be the most common scenario. If your text is on a different
            background color, pass that color as a parameter to the mixin."
-        - "When you're confident that text will always be on a white background,
+        - "If you're confident that text will always be on a white background,
            you can use the simple .u-break-underlines class."
       markup: |
         <p class="u-break-underlines">
@@ -532,14 +532,38 @@
             Duis aute irure dolor in <b><a href="#">reprehenderit</a></b>
             in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </p>
+  tags:
+    - cf-core
 */
 
-.u-breaking-link-underlines(@background-color: @white) {
+.u-breaking-link-underlines(@background-color: #FFF) {
     a {
-        text-shadow: -1px -1px 0 @background-color,
-                      1px -1px 0 @background-color,
-                     -1px  1px 0 @background-color,
-                      1px  1px 0 @background-color;
+        text-shadow: 0  .03em @background-color,
+                     0 -.03em @background-color,
+                      .03em 0 @background-color,
+                     -.03em 0 @background-color,
+                      .06em 0 @background-color,
+                     -.06em 0 @background-color,
+                      .09em 0 @background-color,
+                     -.09em 0 @background-color,
+                      .12em 0 @background-color,
+                     -.12em 0 @background-color,
+                      .15em 0 @background-color,
+                     -.15em 0 @background-color;
+
+        &::selection {
+            color: darken(@link-text, 10%);
+            text-shadow: none;
+        }
+
+        &::-moz-selection {
+            color: darken(@link-text, 10%);
+            text-shadow: none;
+        }
+
+        &:before, &:after, *, *:before, *:after {
+            text-shadow: none;
+        }
     }
 }
 
