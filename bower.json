@@ -1,6 +1,6 @@
 {
   "name": "cf-core",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Base styling, including heading hierarchy, links, and some handy webfont mixins for Capital Framework.",
   "keywords": [
     "capital-framework",
@@ -24,6 +24,9 @@
   "dependencies": {
     "normalize-css": "~3.0.0",
     "normalize-legacy-addon": "git://github.com/cfpb/normalize-legacy-addon.git#0.1.0"
+  },
+  "devDependencies": {
+    "modernizr-dev": "http://modernizr.com/downloads/modernizr-latest.js"
   },
   "exportsOverride": {
     "cf-*": {

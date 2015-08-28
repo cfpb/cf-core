@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="static/docs/brackets.css">
     <link rel="stylesheet" type="text/css" href="static/docs/docs.css">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <script src="static/js/modernizr-custom.js"></script>
   </head>
   <body>
     <div class="docs-sidebar-wrapper">
@@ -198,6 +199,11 @@ Compiles to:
               </footer>
             </div>
           </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">.no-js .u-js-only {
+  display: none !important;
+}</code></pre>
+          </div>
         </div>
         <div id="clearfix" class="docs-component">
           <h2 class="docs-component_header"><span>Clearfix</span></h2>
@@ -229,6 +235,16 @@ Compiles to:
                 </ul>
               </footer>
             </div>
+          </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">.u-clearfix:after {
+  content: &quot;&quot;;
+  display: table;
+  clear: both;
+}
+.lt-ie8 .u-clearfix {
+  zoom: 1;
+}</code></pre>
           </div>
         </div>
         <div id="visually-hidden" class="docs-component">
@@ -267,6 +283,18 @@ Compiles to:
               </footer>
             </div>
           </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">.u-visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}</code></pre>
+          </div>
         </div>
         <div id="inline-block" class="docs-component">
           <h2 class="docs-component_header"><span>Inline block</span></h2>
@@ -284,6 +312,14 @@ Compiles to:
                 </ul>
               </footer>
             </div>
+          </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">.u-inline-block {
+  display: inline-block;
+}
+.lt-ie8 .u-inline-block {
+  display: inline;
+}</code></pre>
           </div>
         </div>
         <div id="floating-right" class="docs-component">
@@ -304,6 +340,11 @@ Compiles to:
                 </ul>
               </footer>
             </div>
+          </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">.u-right {
+  float: right;
+}</code></pre>
           </div>
         </div>
         <div id="break-word" class="docs-component">
@@ -358,6 +399,11 @@ Compiles to:
                 </ul>
               </footer>
             </div>
+          </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">.u-break-word {
+  word-break: break-all;
+}</code></pre>
           </div>
         </div>
         <div id="align-with-button" class="docs-component">
@@ -516,6 +562,25 @@ Compiles to:
               </footer>
             </div>
           </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">.u-flexible-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.u-flexible-container_inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.u-flexible-container__4-3 {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+}</code></pre>
+          </div>
         </div>
         <div id="link-mixins" class="docs-component">
           <h2 class="docs-component_header"><span>Link mixins</span></h2>
@@ -573,13 +638,13 @@ Compiles to:
               <footer class="docs-pattern_footer">
                 <ul class="docs-codenotes">
                   <li>
-                    <pre class="docs-code"><code>.u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba);</code></pre>
+                    <pre class="docs-code"><code>.u-link__colors(@c, @v, @h, @f, @a, @uc, @uv, @uh, @uf, @ua);</code></pre>
                   </li>
                 </ul>
                 <ul class="docs-notes">
-                  <li>Allows you to color text and the borders separately.</li>
-                  <li>The first five colors in 'love/hate' mnemonic order will color text for the :link, :visited, :hover, :focus, and :active states respectively. The last five colors in 'love/hate' mnemonic order will color the borders for the :link, :visited, :hover, :focus, and :active states respectively.</li>
-                  <li>Even though this mixin is basically the same as .u-link__colors-base(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba); we encourage you to use .u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba) to promote consistency.</li>
+                  <li>Allows you to color text and the underlines separately.</li>
+                  <li>The first five colors in 'love/hate' mnemonic order will color text for the :link, :visited, :hover, :focus, and :active states respectively. The last five colors in 'love/hate' mnemonic order will color the underlines for the :link, :visited, :hover, :focus, and :active states respectively.</li>
+                  <li>Even though this mixin is basically the same as .u-link__colors-base(@c, @v, @h, @f, @a, @uc, @uv, @uh, @uf, @ua); we encourage you to use .u-link__colors(@c, @v, @h, @f, @a, @uc, @uv, @uh, @uf, @ua) to promote consistency.</li>
                 </ul>
               </footer>
             </div>
@@ -599,11 +664,11 @@ Compiles to:
               <footer class="docs-pattern_footer">
                 <ul class="docs-codenotes">
                   <li>
-                    <pre class="docs-code"><code>.u-link__border();</code></pre>
+                    <pre class="docs-code"><code>.u-link__underline();</code></pre>
                   </li>
                 </ul>
                 <ul class="docs-notes">
-                  <li>Forces the default bottom border on the :link and :hover states.</li>
+                  <li>Forces the default underline on the :link and :hover states.</li>
                 </ul>
               </footer>
             </div>
@@ -611,11 +676,11 @@ Compiles to:
               <footer class="docs-pattern_footer">
                 <ul class="docs-codenotes">
                   <li>
-                    <pre class="docs-code"><code>.u-link__no-border();</code></pre>
+                    <pre class="docs-code"><code>.u-link__no-underline();</code></pre>
                   </li>
                 </ul>
                 <ul class="docs-notes">
-                  <li>Turn off the default bottom border on the :link and :hover states.</li>
+                  <li>Turn off the default underline on the :link and :hover states.</li>
                 </ul>
               </footer>
             </div>
@@ -623,11 +688,11 @@ Compiles to:
               <footer class="docs-pattern_footer">
                 <ul class="docs-codenotes">
                   <li>
-                    <pre class="docs-code"><code>.u-link__hover-border();</code></pre>
+                    <pre class="docs-code"><code>.u-link__hover-underline();</code></pre>
                   </li>
                 </ul>
                 <ul class="docs-notes">
-                  <li>Turn off the default bottom border on the :link state and force a bottom border on the :hover state.</li>
+                  <li>Turn off the default underline on the :link state and force a underline on the :hover state.</li>
                 </ul>
               </footer>
             </div>
@@ -656,6 +721,122 @@ Compiles to:
               </footer>
             </div>
           </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">.u-link__border,
+.u-link__underline {
+  text-decoration: underline;
+}
+.cssgradients .u-link__border,
+.cssgradients .u-link__underline {
+  -webkit-background-size: 4px 2px;
+  background-size: 4px 2px;
+  text-decoration: none;
+}
+.u-link__no-border,
+.u-link__no-underline {
+  text-decoration: none !important;
+}
+.cssgradients .u-link__no-border,
+.cssgradients .u-link__no-underline {
+  -webkit-background-size: 0 0 !important;
+  background-size: 0 0 !important;
+}
+.u-link__hover-border,
+.u-link__hover-underline {
+  text-decoration: none !important;
+}
+.cssgradients .u-link__hover-border,
+.cssgradients .u-link__hover-underline {
+  -webkit-background-size: 0 0 !important;
+  background-size: 0 0 !important;
+}
+.u-link__hover-border:hover,
+.u-link__hover-underline:hover,
+.u-link__hover-border.hover,
+.u-link__hover-underline.hover,
+.u-link__hover-border:focus,
+.u-link__hover-underline:focus,
+.u-link__hover-border.focus,
+.u-link__hover-underline.focus {
+  text-decoration: underline !important;
+}
+.cssgradients .u-link__hover-border:hover,
+.cssgradients .u-link__hover-underline:hover,
+.cssgradients .u-link__hover-border.hover,
+.cssgradients .u-link__hover-underline.hover,
+.cssgradients .u-link__hover-border:focus,
+.cssgradients .u-link__hover-underline:focus,
+.cssgradients .u-link__hover-border.focus,
+.cssgradients .u-link__hover-underline.focus {
+  -webkit-background-size: 4px 2px !important;
+  background-size: 4px 2px !important;
+  text-decoration: none !important;
+}</code></pre>
+          </div>
+        </div>
+        <div id="breaking-link-underlines-mixin" class="docs-component">
+          <h2 class="docs-component_header"><span>Breaking link underlines mixin</span></h2>
+          <div class="docs-patterns">
+            <div class="docs-pattern">
+              <section class="docs-pattern_pattern">
+<p class="u-break-underlines">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore
+    <a href="#">magna aliqua</a>. Ut enim ad, minim veniam quis nostrud
+    exercitation ullamco laboris nisi ut
+    <i><a href="#">aliquip ex</a></i> ea commodo consequat.
+    Duis aute irure dolor in <b><a href="#">reprehenderit</a></b>
+    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+</p>
+
+              </section>
+              <footer class="docs-pattern_footer">
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;p class=&quot;u-break-underlines&quot;&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore
+    &lt;a href=&quot;#&quot;&gt;magna aliqua&lt;/a&gt;. Ut enim ad, minim veniam quis nostrud
+    exercitation ullamco laboris nisi ut
+    &lt;i&gt;&lt;a href=&quot;#&quot;&gt;aliquip ex&lt;/a&gt;&lt;/i&gt; ea commodo consequat.
+    Duis aute irure dolor in &lt;b&gt;&lt;a href=&quot;#&quot;&gt;reprehenderit&lt;/a&gt;&lt;/b&gt;
+    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+&lt;/p&gt;</code></pre>
+                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-core/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;p class=\&amp;quot;u-break-underlines\&amp;quot;&gt;\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore\n    &lt;a href=\&amp;quot;#\&amp;quot;&gt;magna aliqua&lt;/a&gt;. Ut enim ad, minim veniam quis nostrud\n    exercitation ullamco laboris nisi ut\n    &lt;i&gt;&lt;a href=\&amp;quot;#\&amp;quot;&gt;aliquip ex&lt;/a&gt;&lt;/i&gt; ea commodo consequat.\n    Duis aute irure dolor in &lt;b&gt;&lt;a href=\&amp;quot;#\&amp;quot;&gt;reprehenderit&lt;/a&gt;&lt;/b&gt;\n    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n&lt;/p&gt;\n&amp;quot;}">
+                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+                </form>
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>.u-breaking-link-underlines(@background-color);</code></pre>
+                  </li>
+                </ul>
+                <ul class="docs-notes">
+                  <li>Add this mixin to a container to give all of its descendant links a text shadow that simulates the effect of the link's underline breaking around descenders.</li>
+                  <li>The @background-color argument defaults to white, which is likely to be the most common scenario. If your text is on a different background color, pass that color as a parameter to the mixin.</li>
+                  <li>If you're confident that text will always be on a white background, you can use the simple .u-break-underlines class.</li>
+                </ul>
+              </footer>
+            </div>
+          </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">.u-break-underlines a {
+  text-shadow: 0 0.03em #ffffff, 0 -0.03em #ffffff, 0.03em 0 #ffffff, -0.03em 0 #ffffff, 0.06em 0 #ffffff, -0.06em 0 #ffffff, 0.09em 0 #ffffff, -0.09em 0 #ffffff, 0.12em 0 #ffffff, -0.12em 0 #ffffff, 0.15em 0 #ffffff, -0.15em 0 #ffffff;
+}
+.u-break-underlines a::selection {
+  color: #9e2958;
+  text-shadow: none;
+}
+.u-break-underlines a::-moz-selection {
+  color: #9e2958;
+  text-shadow: none;
+}
+.u-break-underlines a:before,
+.u-break-underlines a:after,
+.u-break-underlines a *,
+.u-break-underlines a *:before,
+.u-break-underlines a *:after {
+  text-shadow: none;
+}</code></pre>
+          </div>
         </div>
         <div id="margin-utilities" class="docs-component">
           <h2 class="docs-component_header"><span>Margin utilities</span></h2>
@@ -674,6 +855,56 @@ Compiles to:
                 </ul>
               </footer>
             </div>
+          </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">.u-mt0 {
+  margin-top: 0 !important;
+}
+.u-mb0 {
+  margin-bottom: 0 !important;
+}
+.u-mt5 {
+  margin-top: 5px !important;
+}
+.u-mb5 {
+  margin-bottom: 5px !important;
+}
+.u-mt10 {
+  margin-top: 10px !important;
+}
+.u-mb10 {
+  margin-bottom: 10px !important;
+}
+.u-mt15 {
+  margin-top: 15px !important;
+}
+.u-mb15 {
+  margin-bottom: 15px !important;
+}
+.u-mt20 {
+  margin-top: 20px !important;
+}
+.u-mb20 {
+  margin-bottom: 20px !important;
+}
+.u-mt30 {
+  margin-top: 30px !important;
+}
+.u-mb30 {
+  margin-bottom: 30px !important;
+}
+.u-mt45 {
+  margin-top: 45px !important;
+}
+.u-mb45 {
+  margin-bottom: 45px !important;
+}
+.u-mt60 {
+  margin-top: 60px !important;
+}
+.u-mb60 {
+  margin-bottom: 60px !important;
+}</code></pre>
           </div>
         </div>
         <div id="width-utilities" class="docs-component">
@@ -779,6 +1010,50 @@ Compiles to:
               </footer>
             </div>
           </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">.u-w100pct {
+  width: 100%;
+}
+.u-w90pct {
+  width: 90%;
+}
+.u-w80pct {
+  width: 80%;
+}
+.u-w70pct {
+  width: 70%;
+}
+.u-w60pct {
+  width: 60%;
+}
+.u-w50pct {
+  width: 50%;
+}
+.u-w40pct {
+  width: 40%;
+}
+.u-w30pct {
+  width: 30%;
+}
+.u-w20pct {
+  width: 20%;
+}
+.u-w10pct {
+  width: 10%;
+}
+.u-w75pct {
+  width: 75%;
+}
+.u-w25pct {
+  width: 25%;
+}
+.u-w66pct {
+  width: 66.66666667%;
+}
+.u-w33pct {
+  width: 33.33333333%;
+}</code></pre>
+          </div>
         </div>
         <div id="width-specific-display" class="docs-component">
           <h2 class="docs-component_header"><span>Width-specific display</span></h2>
@@ -851,6 +1126,21 @@ Compiles to:
               </footer>
             </div>
           </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">@media only all and (max-width: 37.4375em) {
+  .u-hide-on-mobile {
+    display: none;
+  }
+}
+.u-show-on-mobile {
+  display: none;
+}
+@media only all and (max-width: 37.4375em) {
+  .u-show-on-mobile {
+    display: block;
+  }
+}</code></pre>
+          </div>
         </div>
         <div id="small-text-utility" class="docs-component">
           <h2 class="docs-component_header"><span>Small text utility</span></h2>
@@ -909,6 +1199,14 @@ Lorem ipsum<br>
                 </ul>
               </footer>
             </div>
+          </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">.u-small-text {
+  font-size: 0.875em;
+}
+small {
+  font-size: 0.875em;
+}</code></pre>
           </div>
         </div>
         <div id="webfonts" class="docs-component">
@@ -1096,6 +1394,357 @@ Lorem ipsum<br>
               </footer>
             </div>
           </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">body {
+  color: #5b3b57;
+  font-family: Georgia, &quot;Times New Roman&quot;, serif;
+  font-size: 100%;
+  line-height: 1.375;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-family: Arial, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+h1 em,
+.h1 em,
+h2 em,
+.h2 em,
+h3 em,
+.h3 em,
+h1 i,
+.h1 i,
+h2 i,
+.h2 i,
+h3 i,
+.h3 i {
+  font-family: Arial, Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 h1 em,
+.lt-ie9 .h1 em,
+.lt-ie9 h2 em,
+.lt-ie9 .h2 em,
+.lt-ie9 h3 em,
+.lt-ie9 .h3 em,
+.lt-ie9 h1 i,
+.lt-ie9 .h1 i,
+.lt-ie9 h2 i,
+.lt-ie9 .h2 i,
+.lt-ie9 h3 i,
+.lt-ie9 .h3 i {
+  font-style: normal !important;
+}
+h1 strong,
+.h1 strong,
+h2 strong,
+.h2 strong,
+h3 strong,
+.h3 strong,
+h1 b,
+.h1 b,
+h2 b,
+.h2 b,
+h3 b,
+.h3 b {
+  font-family: Arial, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 h1 strong,
+.lt-ie9 .h1 strong,
+.lt-ie9 h2 strong,
+.lt-ie9 .h2 strong,
+.lt-ie9 h3 strong,
+.lt-ie9 .h3 strong,
+.lt-ie9 h1 b,
+.lt-ie9 .h1 b,
+.lt-ie9 h2 b,
+.lt-ie9 .h2 b,
+.lt-ie9 h3 b,
+.lt-ie9 .h3 b {
+  font-weight: normal !important;
+}
+h1,
+.h1 {
+  margin-top: 0;
+  margin-bottom: 0.47058824em;
+  font-size: 2.125em;
+  line-height: 1.29411765;
+}
+@media only all and (max-width: 37.4375em) {
+  h1,
+  .h1 {
+    font-family: Arial, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0.73076923em;
+    font-size: 1.625em;
+    line-height: 1.26923077;
+  }
+  h1 em,
+  .h1 em,
+  h1 i,
+  .h1 i {
+    font-family: Arial, Arial, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+  }
+  .lt-ie9 h1 em,
+  .lt-ie9 .h1 em,
+  .lt-ie9 h1 i,
+  .lt-ie9 .h1 i {
+    font-style: normal !important;
+  }
+  h1 strong,
+  .h1 strong,
+  h1 b,
+  .h1 b {
+    font-family: Arial, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .lt-ie9 h1 strong,
+  .lt-ie9 .h1 strong,
+  .lt-ie9 h1 b,
+  .lt-ie9 .h1 b {
+    font-weight: normal !important;
+  }
+}
+@media only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) {
+  h1,
+  .h1 {
+    font-family: Arial, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0.95454545em;
+    font-size: 1.375em;
+    line-height: 1.27272727;
+  }
+  h1 em,
+  .h1 em,
+  h1 i,
+  .h1 i {
+    font-family: Arial, Arial, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+  }
+  .lt-ie9 h1 em,
+  .lt-ie9 .h1 em,
+  .lt-ie9 h1 i,
+  .lt-ie9 .h1 i {
+    font-style: normal !important;
+  }
+  h1 strong,
+  .h1 strong,
+  h1 b,
+  .h1 b {
+    font-family: Arial, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .lt-ie9 h1 strong,
+  .lt-ie9 .h1 strong,
+  .lt-ie9 h1 b,
+  .lt-ie9 .h1 b {
+    font-weight: normal !important;
+  }
+}
+@media only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) {
+  h1,
+  .h1 {
+    margin-top: 0;
+    margin-bottom: 1.16666667em;
+    font-size: 1.125em;
+    font-family: Arial, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.22222222;
+  }
+  .lt-ie9 h1,
+  .lt-ie9 .h1 {
+    font-weight: normal !important;
+  }
+}
+h2,
+.h2 {
+  margin-top: 0;
+  margin-bottom: 0.73076923em;
+  font-size: 1.625em;
+  line-height: 1.26923077;
+}
+@media only all and (max-width: 37.4375em) {
+  h2,
+  .h2 {
+    font-family: Arial, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0.95454545em;
+    font-size: 1.375em;
+    line-height: 1.27272727;
+  }
+  h2 em,
+  .h2 em,
+  h2 i,
+  .h2 i {
+    font-family: Arial, Arial, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+  }
+  .lt-ie9 h2 em,
+  .lt-ie9 .h2 em,
+  .lt-ie9 h2 i,
+  .lt-ie9 .h2 i {
+    font-style: normal !important;
+  }
+  h2 strong,
+  .h2 strong,
+  h2 b,
+  .h2 b {
+    font-family: Arial, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .lt-ie9 h2 strong,
+  .lt-ie9 .h2 strong,
+  .lt-ie9 h2 b,
+  .lt-ie9 .h2 b {
+    font-weight: normal !important;
+  }
+}
+@media only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) {
+  h2,
+  .h2 {
+    margin-top: 0;
+    margin-bottom: 1.16666667em;
+    font-size: 1.125em;
+    font-family: Arial, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.22222222;
+  }
+  .lt-ie9 h2,
+  .lt-ie9 .h2 {
+    font-weight: normal !important;
+  }
+}
+h3,
+.h3 {
+  margin-top: 0;
+  margin-bottom: 0.95454545em;
+  font-size: 1.375em;
+  line-height: 1.27272727;
+}
+@media only all and (max-width: 37.4375em) {
+  h3,
+  .h3 {
+    margin-top: 0;
+    margin-bottom: 1.16666667em;
+    font-size: 1.125em;
+    font-family: Arial, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.22222222;
+  }
+  .lt-ie9 h3,
+  .lt-ie9 .h3 {
+    font-weight: normal !important;
+  }
+}
+h4,
+.h4 {
+  margin-top: 0;
+  margin-bottom: 1.16666667em;
+  font-size: 1.125em;
+  font-family: Arial, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.22222222;
+}
+.lt-ie9 h4,
+.lt-ie9 .h4 {
+  font-weight: normal !important;
+}
+h5,
+h6,
+.h5,
+.h6 {
+  font-family: Arial, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.lt-ie9 h5,
+.lt-ie9 h6,
+.lt-ie9 .h5,
+.lt-ie9 .h6 {
+  font-weight: normal !important;
+}
+h5,
+.h5 {
+  margin-top: 0;
+  margin-bottom: 0.35714286em;
+  font-size: 0.875em;
+  line-height: 1.57142857;
+}
+h6,
+.h6 {
+  margin-top: 0;
+  margin-bottom: 0.41666667em;
+  font-size: 0.75em;
+  line-height: 1.83333333;
+}
+.subheader {
+  margin-top: 0;
+  margin-bottom: 1.16666667em;
+  font-size: 1.125em;
+  font-family: Arial, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.22222222;
+}
+.subheader em,
+.subheader i {
+  font-family: Arial, Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .subheader em,
+.lt-ie9 .subheader i {
+  font-style: normal !important;
+}
+.subheader strong,
+.subheader b {
+  font-family: Arial, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .subheader strong,
+.lt-ie9 .subheader b {
+  font-weight: normal !important;
+}
+.superheader {
+  margin-bottom: 0.1875em;
+  font-size: 3em;
+  font-family: Arial, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.25;
+}
+.lt-ie9 .superheader {
+  font-weight: normal !important;
+}</code></pre>
+          </div>
         </div>
         <div id="margins" class="docs-component">
           <h2 class="docs-component_header"><span>Margins</span></h2>
@@ -1119,6 +1768,17 @@ Lorem ipsum<br>
                 </ul>
               </footer>
             </div>
+          </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">p,
+ul,
+ol,
+dl,
+table,
+figure {
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}</code></pre>
           </div>
         </div>
         <div id="default-link" class="docs-component">
@@ -1200,6 +1860,60 @@ Lorem ipsum<br>
               </footer>
             </div>
           </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">a {
+  color: #c7336e;
+  text-decoration: none;
+}
+.cssgradients a {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(199, 51, 110, 0.5)), to(transparent));
+  background-image: -webkit-linear-gradient(left, rgba(199, 51, 110, 0.5) 2px, transparent 2px);
+  background-image: linear-gradient(to right, rgba(199, 51, 110, 0.5) 2px, transparent 2px);
+  background-repeat: repeat-x;
+  background-position: 0 1.0625em;
+  -webkit-background-size: 0;
+  background-size: 0;
+}
+a:visited,
+a.visited {
+  color: #cf447c;
+}
+.cssgradients a:visited,
+.cssgradients a.visited {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(207, 68, 124, 0.5)), to(transparent));
+  background-image: -webkit-linear-gradient(left, rgba(207, 68, 124, 0.5) 2px, transparent 2px);
+  background-image: linear-gradient(to right, rgba(207, 68, 124, 0.5) 2px, transparent 2px);
+}
+a:hover,
+a.hover {
+  color: #9e2958;
+}
+.cssgradients a:hover,
+.cssgradients a.hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(158, 41, 88, 0.5)));
+  background-image: -webkit-linear-gradient(left, rgba(158, 41, 88, 0.5) 2px);
+  background-image: linear-gradient(to right, rgba(158, 41, 88, 0.5) 2px);
+}
+a:focus,
+a.focus {
+  outline: thin dotted;
+}
+.cssgradients a:focus,
+.cssgradients a.focus {
+  -webkit-background-size: 0;
+  background-size: 0;
+}
+a:active,
+a.active {
+  color: #8a234c;
+}
+.cssgradients a:active,
+.cssgradients a.active {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(138, 35, 76, 0.5)), to(transparent));
+  background-image: -webkit-linear-gradient(left, rgba(138, 35, 76, 0.5) 2px, transparent 2px);
+  background-image: linear-gradient(to right, rgba(138, 35, 76, 0.5) 2px, transparent 2px);
+}</code></pre>
+          </div>
         </div>
         <div id="underlined-links" class="docs-component">
           <h2 class="docs-component_header"><span>Underlined links</span></h2>
@@ -1230,7 +1944,7 @@ Lorem ipsum<br>
                 </form>
                 <ul class="docs-notes">
                   <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
-                  <li>The underline style properties are mostly set above in the a tag. To enable the underline simply set a bottom-border-width as done here.</li>
+                  <li>The underline style properties are mostly set above in the a tag. To enable the underline, simply set the background-size (and text-decoration fallback) as done here.</li>
                 </ul>
               </footer>
             </div>
@@ -1277,7 +1991,7 @@ Lorem ipsum<br>
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-notes">
-                  <li>We're restricting link borders to links within p, li, and dd so that we don't have to override them every time we want a plain link.</li>
+                  <li>We're restricting underlines to links within p, li, and dd so that we don't have to override them every time we want a plain link.</li>
                 </ul>
               </footer>
             </div>
@@ -1333,6 +2047,45 @@ Lorem ipsum<br>
               </footer>
             </div>
           </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">p a,
+li a,
+dd a {
+  text-decoration: underline;
+}
+.cssgradients p a,
+.cssgradients li a,
+.cssgradients dd a {
+  -webkit-background-size: 4px 2px;
+  background-size: 4px 2px;
+  text-decoration: none;
+}
+.cssgradients p a:before,
+.cssgradients li a:before,
+.cssgradients dd a:before,
+.cssgradients p a:after,
+.cssgradients li a:after,
+.cssgradients dd a:after,
+.cssgradients p a *,
+.cssgradients li a *,
+.cssgradients dd a *,
+.cssgradients p a *:before,
+.cssgradients li a *:before,
+.cssgradients dd a *:before,
+.cssgradients p a *:after,
+.cssgradients li a *:after,
+.cssgradients dd a *:after {
+  -webkit-background-size: 0;
+  background-size: 0;
+}
+nav a {
+  text-decoration: none;
+}
+.cssgradients nav a {
+  -webkit-background-size: 0;
+  background-size: 0;
+}</code></pre>
+          </div>
         </div>
         <div id="lists" class="docs-component">
           <h2 class="docs-component_header"><span>Lists</span></h2>
@@ -1359,6 +2112,11 @@ Lorem ipsum<br>
                 </form>
               </footer>
             </div>
+          </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">ul {
+  list-style: square;
+}</code></pre>
           </div>
         </div>
         <div id="tables" class="docs-component">
@@ -1496,6 +2254,60 @@ Lorem ipsum<br>
               </footer>
             </div>
           </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">table {
+  font-family: Arial, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+table em,
+table i {
+  font-family: Arial, Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 table em,
+.lt-ie9 table i {
+  font-style: normal !important;
+}
+table strong,
+table b {
+  font-family: Arial, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 table strong,
+.lt-ie9 table b {
+  font-weight: normal !important;
+}
+th,
+td {
+  padding: 0.75em 0.9375em;
+  background: #eee4ed;
+}
+thead th,
+thead td {
+  color: #ffffff;
+  background: #5b3b57;
+}
+tbody &gt; tr:nth-child(odd) &gt; th,
+tbody &gt; tr:nth-child(odd) &gt; td {
+  background: #f4edf3;
+}
+.compact-table th,
+.compact-table td {
+  padding: 0.4375em 0.625em;
+}
+th {
+  font-family: Arial, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-align: left;
+}
+.lt-ie9 th {
+  font-weight: normal !important;
+}</code></pre>
+          </div>
         </div>
         <div id="block-quote" class="docs-component">
           <h2 class="docs-component_header"><span>Block quote</span></h2>
@@ -1538,6 +2350,16 @@ Lorem ipsum<br>
                 </ul>
               </footer>
             </div>
+          </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">blockquote {
+  margin: 1.25em;
+}
+@media only all and (min-width: 37.5em) {
+  blockquote {
+    margin: 1.75em 2.5em;
+  }
+}</code></pre>
           </div>
         </div>
         <div id="form-labels" class="docs-component">
@@ -1590,6 +2412,39 @@ Lorem ipsum<br>
                 </form>
               </footer>
             </div>
+          </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">label {
+  display: block;
+  margin-bottom: 0.3125em;
+  font-family: Arial, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+label em,
+label i {
+  font-family: Arial, Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 label em,
+.lt-ie9 label i {
+  font-style: normal !important;
+}
+label strong,
+label b {
+  font-family: Arial, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 label strong,
+.lt-ie9 label b {
+  font-weight: normal !important;
+}
+label input[type=&quot;radio&quot;],
+label input[type=&quot;checkbox&quot;] {
+  margin-right: 0.375em;
+}</code></pre>
           </div>
         </div>
         <div id="form-elements" class="docs-component">
@@ -1774,6 +2629,62 @@ Lorem ipsum<br>
               </footer>
             </div>
           </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">input[type=&quot;text&quot;],
+input[type=&quot;search&quot;],
+input[type=&quot;email&quot;],
+input[type=&quot;url&quot;],
+input[type=&quot;tel&quot;],
+input[type=&quot;number&quot;],
+textarea,
+select[multiple] {
+  display: inline-block;
+  margin: 0;
+  padding: 0.375em;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  background: #ffffff;
+  border: 1px solid #5b3b57;
+  border-radius: 0;
+  vertical-align: top;
+  -webkit-appearance: none;
+  -webkit-user-modify: read-write-plaintext-only;
+}
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type=&quot;text&quot;]:focus,
+input[type=&quot;text&quot;].focus,
+input[type=&quot;search&quot;]:focus,
+input[type=&quot;search&quot;].focus,
+input[type=&quot;email&quot;]:focus,
+input[type=&quot;email&quot;].focus,
+input[type=&quot;url&quot;]:focus,
+input[type=&quot;url&quot;].focus,
+input[type=&quot;tel&quot;]:focus,
+input[type=&quot;tel&quot;].focus,
+input[type=&quot;number&quot;]:focus,
+input[type=&quot;number&quot;].focus,
+textarea:focus,
+textarea.focus,
+select[multiple]:focus,
+select[multiple].focus {
+  border: 1px solid #c7336e;
+  outline: 1px solid #c7336e;
+  outline-offset: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+::-webkit-input-placeholder {
+  color: grayscale(#c7336e);
+}
+::-moz-placeholder {
+  color: grayscale(#c7336e);
+}
+:-ms-input-placeholder {
+  color: grayscale(#c7336e);
+}</code></pre>
+          </div>
         </div>
         <div id="images" class="docs-component">
           <h2 class="docs-component_header"><span>Images</span></h2>
@@ -1795,6 +2706,11 @@ Lorem ipsum<br>
                 </ul>
               </footer>
             </div>
+          </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">img {
+  max-width: 100%;
+}</code></pre>
           </div>
         </div>
         <div id="figure" class="docs-component">
@@ -1836,6 +2752,67 @@ Lorem ipsum<br>
                 </form>
               </footer>
             </div>
+          </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+figure img {
+  vertical-align: middle;
+}
+.figure__bordered img {
+  border: 1px solid #5b3b57;
+}</code></pre>
+          </div>
+        </div>
+        <div id="selected-text" class="docs-component">
+          <h2 class="docs-component_header"><span>Selected text</span></h2>
+          <div class="docs-patterns">
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">figure</h3>
+              <section class="docs-pattern_pattern">
+<figure>
+    <img src="http://placekitten.com/340/320">
+</figure>
+
+              </section>
+              <footer class="docs-pattern_footer">
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;figure&gt;
+    &lt;img src=&quot;http://placekitten.com/340/320&quot;&gt;
+&lt;/figure&gt;</code></pre>
+                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-core/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;figure&gt;\n    &lt;img src=\&amp;quot;http://placekitten.com/340/320\&amp;quot;&gt;\n&lt;/figure&gt;\n&amp;quot;}">
+                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+                </form>
+              </footer>
+            </div>
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">figure.figure__bordered</h3>
+              <section class="docs-pattern_pattern">
+<figure class="figure__bordered">
+    <img src="http://placekitten.com/340/320">
+</figure>
+
+              </section>
+              <footer class="docs-pattern_footer">
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;figure class=&quot;figure__bordered&quot;&gt;
+    &lt;img src=&quot;http://placekitten.com/340/320&quot;&gt;
+&lt;/figure&gt;</code></pre>
+                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-core/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;figure class=\&amp;quot;figure__bordered\&amp;quot;&gt;\n    &lt;img src=\&amp;quot;http://placekitten.com/340/320\&amp;quot;&gt;\n&lt;/figure&gt;\n&amp;quot;}">
+                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+                </form>
+              </footer>
+            </div>
+          </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">*::selection {
+  background: #cce3f5;
+}
+*::-moz-selection {
+  background: #cce3f5;
+}</code></pre>
           </div>
         </div>
       </div>
