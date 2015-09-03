@@ -219,7 +219,7 @@ h1,
 .h1 {
     .heading-1();
 
-    .respond-to-max(@mobile-max, {
+    .respond-to-max(@bp-xs-max, {
         .heading-2();
     });
 }
@@ -228,7 +228,7 @@ h2,
 .h2 {
     .heading-2();
 
-    .respond-to-max(@mobile-max, {
+    .respond-to-max(@bp-xs-max, {
         .heading-3();
     });
 }
@@ -237,7 +237,7 @@ h3,
 .h3 {
     .heading-3();
 
-    .respond-to-max(@mobile-max, {
+    .respond-to-max(@bp-xs-max, {
         .heading-4();
     });
 }
@@ -559,10 +559,10 @@ blockquote {
     // Vertical spacing has been eyeballed to be 30px from the baseline.
     margin: unit(20px / @base-font-size-px, em);
 
-    @media only all and (min-width: (unit(600px / @base-font-size-px, em))) {
+    .respond-to-min(@bp-sm-min, {
         margin: unit(28px / @base-font-size-px, em)
                 unit(40px / @base-font-size-px, em);
-    }
+    });
 }
 
 

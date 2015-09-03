@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## Unreleased
+
+## 1.2.0 - 2015-10-13
+
+- Updated to DMs t-shirt sized breakpoint variables
+- Prepared old device centric variable for deprecation
+
 ## 1.1.3 - 2015-10-08
 - Changed default colors for links to make them 508 compliant.
 
