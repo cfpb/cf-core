@@ -480,17 +480,17 @@ ul {
             </thead>
             <tbody>
                 <tr>
-                    <th>Row 1 header</th>
+                    <td>Row 1, column 1</td>
                     <td>Row 1, column 2</td>
                     <td>Row 1, column 3</td>
                 </tr>
                 <tr>
-                    <th>Row 2 header</th>
+                    <td>Row 2, column 1</td>
                     <td>Row 2, column 2</td>
                     <td>Row 2, column 3</td>
                 </tr>
                 <tr>
-                    <th>Row 3 header</th>
+                    <td>Row 3, column 1</td>
                     <td>Row 3, column 2</td>
                     <td>Row 3, column 3</td>
                 </tr>
@@ -517,6 +517,11 @@ td {
 th {
     .webfont-demi();
     text-align: left;
+}
+
+thead,
+tbody tr {
+    border-bottom: 1px solid @table-border;
 }
 
 
