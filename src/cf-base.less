@@ -597,6 +597,30 @@ blockquote {
 
 
 /* topdoc
+    name: Fieldsets
+    family: cf-core
+    notes:
+      - "Visit https://github.com/cfpb/cf-forms for advanced fieldset patterns."
+    patterns:
+    - name: Default fieldset legend
+      markup: |
+        <fieldset>
+            <legend>Fieldset legend</legend>
+            <label for="name">
+                Label
+            </label>
+            <input type="text" id="name" value="" placeholder="Placeholder text">
+        </fieldset>
+    tags:
+    - cf-core
+*/
+
+legend {
+    .h3();
+}
+
+
+/* topdoc
     name: Form labels
     family: cf-core
     notes:
