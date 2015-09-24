@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 1.0.3 - 2015-09-24
+- Changed table styling and removed some styles (in preperation for cf-tables)
+
 ## 1.0.2 - 2015-07-30
 - Fixed font-weight mixins that were using the reverse variables.
 

@@ -480,52 +480,22 @@ ul {
             </thead>
             <tbody>
                 <tr>
-                    <th>Row 1 header</th>
+                    <td>Row 1, column 1</td>
                     <td>Row 1, column 2</td>
                     <td>Row 1, column 3</td>
                 </tr>
                 <tr>
-                    <th>Row 2 header</th>
+                    <td>Row 2, column 1</td>
                     <td>Row 2, column 2</td>
                     <td>Row 2, column 3</td>
                 </tr>
                 <tr>
-                    <th>Row 3 header</th>
+                    <td>Row 3, column 1</td>
                     <td>Row 3, column 2</td>
                     <td>Row 3, column 3</td>
                 </tr>
             </tbody>
         </table>
-    - name: Compact table
-      markup: |
-        <table class="compact-table">
-            <thead>
-                <tr>
-                    <th>Column 1 header</th>
-                    <th>Column 2 header</th>
-                    <th>Column 3 header</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Row 1 header</th>
-                    <td>Row 1, column 2</td>
-                    <td>Row 1, column 3</td>
-                </tr>
-                <tr>
-                    <th>Row 2 header</th>
-                    <td>Row 2, column 2</td>
-                    <td>Row 2, column 3</td>
-                </tr>
-                <tr>
-                    <th>Row 3 header</th>
-                    <td>Row 3, column 2</td>
-                    <td>Row 3, column 3</td>
-                </tr>
-            </tbody>
-        </table>
-      notes:
-        - Reduces cell padding to 10px.
   tags:
     - cf-core
 */
@@ -536,26 +506,18 @@ table {
 
 th,
 td {
-    padding: unit(12px / @base-font-size-px, em) unit(15px / @base-font-size-px, em);
-    background: @td-bg;
+    padding: unit(10px / @base-font-size-px, em);
 
     thead & {
         color: @thead-text;
         background: @thead-bg;
-    }
-
-    tbody > tr:nth-child(odd) > & {
-        background: @td-bg-alt;
-    }
-
-    .compact-table & {
-        padding: unit(7px / @base-font-size-px, em) unit(10px / @base-font-size-px, em);
+        .h5();
     }
 }
 
-th {
-    .webfont-demi();
-    text-align: left;
+thead,
+tbody tr {
+    border-bottom: 1px solid @table-border;
 }
 
 
