@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 1.0.4 - 2015-10-05
+- Added styles to override browser defaults for TH
+
 ## 1.0.3 - 2015-09-24
 - Changed table styling and removed some styles (in preperation for cf-tables)
 
