@@ -140,7 +140,8 @@ body {
     line-height: @base-line-height;
 }
 
-.heading-1( @font-size: 34px, @line-height: 44px ) {
+.heading-1( @fs: 34px, @line-height: 44px ) {
+    @font-size: @fs;
     .webfont-regular();
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 30px.
@@ -149,7 +150,8 @@ body {
     line-height: unit( @line-height / @font-size );
 }
 
-.heading-2( @font-size: 26px, @line-height: 33px ) {
+.heading-2( @fs: 26px, @line-height: 33px ) {
+    @font-size: @fs;
     .webfont-regular();
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 30px.
@@ -158,7 +160,8 @@ body {
     line-height: unit( @line-height / @font-size );
 }
 
-.heading-3( @font-size: 22px, @line-height: 28px )  {
+.heading-3( @fs: 22px, @line-height: 28px )  {
+    @font-size: @fs;
     .webfont-regular();
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 30px.
@@ -167,7 +170,8 @@ body {
     line-height: unit( @line-height / @font-size );
 }
 
-.heading-4( @font-size: 18px, @line-height: @base-line-height-px )  {
+.heading-4( @fs: 18px, @line-height: @base-line-height-px )  {
+    @font-size: @fs;
     .webfont-medium();
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 30px.
@@ -176,7 +180,8 @@ body {
     line-height: unit( @line-height / @font-size );
 }
 
-.heading-5( @font-size: 14px, @line-height: @base-line-height-px )  {
+.heading-5( @fs: 14px, @line-height: @base-line-height-px )  {
+    @font-size: @fs;
     .webfont-demi();
 
     letter-spacing: 1px;
@@ -188,7 +193,8 @@ body {
     line-height: unit( @line-height / @font-size );
 }
 
-.heading-6( @font-size: 12px, @line-height: @base-line-height-px )  {
+.heading-6( @fs: 12px, @line-height: @base-line-height-px )  {
+    @font-size: @fs;
     .webfont-demi();
 
     letter-spacing: 1px;
