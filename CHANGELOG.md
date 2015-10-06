@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 1.1.2 - 2015-10-05
+- Added styles to override browser defaults for TH
+
 ## 1.1.1 - 2015-20-05
 - Re-exposing the @font-size variable for code that relies on it to build appropriate em values
 
