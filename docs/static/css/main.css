@@ -1721,20 +1721,20 @@ figure {
 a {
   border-width: 0;
   border-style: dotted;
-  border-color: #c7336e;
-  color: #c7336e;
+  border-color: #000080;
+  color: #000080;
   text-decoration: none;
 }
 a:visited,
 a.visited {
-  border-color: #cf447c;
-  color: #cf447c;
+  border-color: #00009a;
+  color: #00009a;
 }
 a:hover,
 a.hover {
   border-style: solid;
-  border-color: #9e2958;
-  color: #9e2958;
+  border-color: #00004d;
+  color: #00004d;
 }
 a:focus,
 a.focus {
@@ -1744,8 +1744,8 @@ a.focus {
 a:active,
 a.active {
   border-style: solid;
-  border-color: #8a234c;
-  color: #8a234c;
+  border-color: #000034;
+  color: #000034;
 }
 /* topdoc
   name: Underlined links
