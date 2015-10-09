@@ -31,6 +31,7 @@
           @link-underline-hover
           @link-text-active
           @link-underline-active
+          @table-border
           @thead-text
           @thead-bg
           @td-bg
@@ -44,7 +45,7 @@
     - cf-core
 */
 
-// Sizing variables 
+// Sizing variables
 
 @base-font-size-px:             16px;
 @base-line-height-px:           22px;
@@ -52,14 +53,14 @@
 @mobile-max:                    599px;
 @tablet-min:                    600px;
 
-// Color variables 
+// Color variables
 
 // body
 @text:                          darken(#895983, 15%);
 
 // a
-@link-text:                     #c7336e;
-@link-underline:                #c7336e;
+@link-text:                     #000080;
+@link-underline:                #000080;
 @link-text-visited:             lighten(@link-text, 5%);
 @link-underline-visited:        lighten(@link-underline, 5%);
 @link-text-hover:               darken(@link-text, 10%);
@@ -67,11 +68,12 @@
 @link-text-active:              darken(@link-text, 15%);
 @link-underline-active:         darken(@link-underline, 15%);
 
+// table
+@table-border:                  #babbbd;
+
 // thead
-@thead-text:                    #fff;
-@thead-bg:                      darken(#895983, 15%);
-@td-bg:                         lighten(#905c8a, 45%);
-@td-bg-alt:                     lighten(@td-bg, 3%);
+@thead-text:                    #000;
+@thead-bg:                      #f8f8f8;
 
 // input
 @input-bg:                      #fff;

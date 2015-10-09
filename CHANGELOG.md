@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 1.1.3 - 2015-10-08
+- Changed default colors for links to make them 508 compliant.
+
+## 1.1.2 - 2015-10-05
+- Added styles to override browser defaults for TH
+
+## 1.1.1 - 2015-20-05
+- Re-exposing the @font-size variable for code that relies on it to build appropriate em values
+
+## 1.1.0 - 2015-10-05
+- Added long-form heading mixins for defining the styles vs short-form for using them
+  - Makes it possible to extend the headings for single-use custom sizes
+  - Fixes an issue with breakpoint recursion in the short-form headings
+
+## 1.0.3 - 2015-09-24
+- Changed table styling and removed some styles (in preperation for cf-tables)
+
 ## 1.0.2 - 2015-07-30
 - Fixed font-weight mixins that were using the reverse variables.
 

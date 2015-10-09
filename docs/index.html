@@ -59,6 +59,7 @@
 @link-underline-hover
 @link-text-active
 @link-underline-active
+@table-border
 @thead-text
 @thead-bg
 @td-bg
@@ -1377,17 +1378,17 @@ Lorem ipsum<br>
     </thead>
     <tbody>
         <tr>
-            <th>Row 1 header</th>
+            <td>Row 1, column 1</td>
             <td>Row 1, column 2</td>
             <td>Row 1, column 3</td>
         </tr>
         <tr>
-            <th>Row 2 header</th>
+            <td>Row 2, column 1</td>
             <td>Row 2, column 2</td>
             <td>Row 2, column 3</td>
         </tr>
         <tr>
-            <th>Row 3 header</th>
+            <td>Row 3, column 1</td>
             <td>Row 3, column 2</td>
             <td>Row 3, column 3</td>
         </tr>
@@ -1406,93 +1407,26 @@ Lorem ipsum<br>
     &lt;/thead&gt;
     &lt;tbody&gt;
         &lt;tr&gt;
-            &lt;th&gt;Row 1 header&lt;/th&gt;
+            &lt;td&gt;Row 1, column 1&lt;/td&gt;
             &lt;td&gt;Row 1, column 2&lt;/td&gt;
             &lt;td&gt;Row 1, column 3&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;th&gt;Row 2 header&lt;/th&gt;
+            &lt;td&gt;Row 2, column 1&lt;/td&gt;
             &lt;td&gt;Row 2, column 2&lt;/td&gt;
             &lt;td&gt;Row 2, column 3&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;th&gt;Row 3 header&lt;/th&gt;
+            &lt;td&gt;Row 3, column 1&lt;/td&gt;
             &lt;td&gt;Row 3, column 2&lt;/td&gt;
             &lt;td&gt;Row 3, column 3&lt;/td&gt;
         &lt;/tr&gt;
     &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-core/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;table&gt;\n    &lt;thead&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Column 1 header&lt;/th&gt;\n            &lt;th&gt;Column 2 header&lt;/th&gt;\n            &lt;th&gt;Column 3 header&lt;/th&gt;\n        &lt;/tr&gt;\n    &lt;/thead&gt;\n    &lt;tbody&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Row 1 header&lt;/th&gt;\n            &lt;td&gt;Row 1, column 2&lt;/td&gt;\n            &lt;td&gt;Row 1, column 3&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Row 2 header&lt;/th&gt;\n            &lt;td&gt;Row 2, column 2&lt;/td&gt;\n            &lt;td&gt;Row 2, column 3&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Row 3 header&lt;/th&gt;\n            &lt;td&gt;Row 3, column 2&lt;/td&gt;\n            &lt;td&gt;Row 3, column 3&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tbody&gt;\n&lt;/table&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-core/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;table&gt;\n    &lt;thead&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Column 1 header&lt;/th&gt;\n            &lt;th&gt;Column 2 header&lt;/th&gt;\n            &lt;th&gt;Column 3 header&lt;/th&gt;\n        &lt;/tr&gt;\n    &lt;/thead&gt;\n    &lt;tbody&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Row 1, column 1&lt;/td&gt;\n            &lt;td&gt;Row 1, column 2&lt;/td&gt;\n            &lt;td&gt;Row 1, column 3&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Row 2, column 1&lt;/td&gt;\n            &lt;td&gt;Row 2, column 2&lt;/td&gt;\n            &lt;td&gt;Row 2, column 3&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;td&gt;Row 3, column 1&lt;/td&gt;\n            &lt;td&gt;Row 3, column 2&lt;/td&gt;\n            &lt;td&gt;Row 3, column 3&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tbody&gt;\n&lt;/table&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
-              </footer>
-            </div>
-            <div class="docs-pattern">
-              <h3 class="docs-pattern_header">Compact table</h3>
-              <section class="docs-pattern_pattern">
-<table class="compact-table">
-    <thead>
-        <tr>
-            <th>Column 1 header</th>
-            <th>Column 2 header</th>
-            <th>Column 3 header</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>Row 1 header</th>
-            <td>Row 1, column 2</td>
-            <td>Row 1, column 3</td>
-        </tr>
-        <tr>
-            <th>Row 2 header</th>
-            <td>Row 2, column 2</td>
-            <td>Row 2, column 3</td>
-        </tr>
-        <tr>
-            <th>Row 3 header</th>
-            <td>Row 3, column 2</td>
-            <td>Row 3, column 3</td>
-        </tr>
-    </tbody>
-</table>
-
-              </section>
-              <footer class="docs-pattern_footer">
-                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;table class=&quot;compact-table&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Column 1 header&lt;/th&gt;
-            &lt;th&gt;Column 2 header&lt;/th&gt;
-            &lt;th&gt;Column 3 header&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Row 1 header&lt;/th&gt;
-            &lt;td&gt;Row 1, column 2&lt;/td&gt;
-            &lt;td&gt;Row 1, column 3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Row 2 header&lt;/th&gt;
-            &lt;td&gt;Row 2, column 2&lt;/td&gt;
-            &lt;td&gt;Row 2, column 3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Row 3 header&lt;/th&gt;
-            &lt;td&gt;Row 3, column 2&lt;/td&gt;
-            &lt;td&gt;Row 3, column 3&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-core/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;table class=\&amp;quot;compact-table\&amp;quot;&gt;\n    &lt;thead&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Column 1 header&lt;/th&gt;\n            &lt;th&gt;Column 2 header&lt;/th&gt;\n            &lt;th&gt;Column 3 header&lt;/th&gt;\n        &lt;/tr&gt;\n    &lt;/thead&gt;\n    &lt;tbody&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Row 1 header&lt;/th&gt;\n            &lt;td&gt;Row 1, column 2&lt;/td&gt;\n            &lt;td&gt;Row 1, column 3&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Row 2 header&lt;/th&gt;\n            &lt;td&gt;Row 2, column 2&lt;/td&gt;\n            &lt;td&gt;Row 2, column 3&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Row 3 header&lt;/th&gt;\n            &lt;td&gt;Row 3, column 2&lt;/td&gt;\n            &lt;td&gt;Row 3, column 3&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/tbody&gt;\n&lt;/table&gt;\n&amp;quot;}">
-                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
-                </form>
-                <ul class="docs-notes">
-                  <li>Reduces cell padding to 10px.</li>
-                </ul>
               </footer>
             </div>
           </div>
