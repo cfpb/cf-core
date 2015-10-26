@@ -70,35 +70,37 @@
 @tablet-min:                    @bp-sm-min;
 
 // Color variables
+// $color- variables are from 18F's US Web Design Standards
+// https://github.com/18F/web-design-standards/blob/18f-pages/assets/_scss/core/_variables.scss
 
 // body
-@text:                          darken(#895983, 15%);
+@text:                          #212121; // $color-base
 
 // a
-@link-text:                     #000080;
-@link-underline:                #000080;
-@link-text-visited:             lighten(@link-text, 5%);
-@link-underline-visited:        lighten(@link-underline, 5%);
-@link-text-hover:               darken(@link-text, 10%);
-@link-underline-hover:          darken(@link-underline, 10%);
-@link-text-active:              darken(@link-text, 15%);
-@link-underline-active:         darken(@link-underline, 15%);
+@link-text:                     #0071bc; // $color-primary
+@link-underline:                #0071bc; // $color-primary
+@link-text-visited:             #4c2c92; // $color-visited
+@link-underline-visited:        #4c2c92; // $color-visited
+@link-text-hover:               #205493; // $color-primary-darker
+@link-underline-hover:          #205493; // $color-primary-darker
+@link-text-active:              #046b99; // $color-primary-darkest
+@link-underline-active:         #046b99; // $color-primary-darkest
 
 // table
-@table-border:                  #babbbd;
+@table-border:                  #5b616b; // $color-gray
 
 // thead
-@thead-text:                    #000;
-@thead-bg:                      #f8f8f8;
+@thead-text:                    @text;
+@thead-bg:                      #f1f1f1; // $color-gray-lightest
 
 // input
 @input-bg:                      #fff;
-@input-border:                  darken(#895983, 15%);
-@input-border-focus:            #c7336e;
+@input-border:                  #5b616b; // $color-gray
+@input-border-focus:            #3e94cf; // $color-focus
 @input-placeholder:             grayscale(#c7336e);
 
 // .figure__bordered
-@figure__bordered:              darken(#895983, 15%);
+@figure__bordered:              #d6d7d9; // $color-gray-lighter
 
 
 /* topdoc
