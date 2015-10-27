@@ -5,6 +5,19 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 ## Unreleased
 
+Updating web type spacing and leading
+
+__Note:__ We are no longer optically adjusting margins/padding to match design mockups pixel perfectly
+
+## Changed
+
+- Updated text leading (line-height) to match recommendation from DM issue #349
+- Updated text top and bottom margins to match recommendation from DM issue #269
+
+## Fixed
+
+- Fixed subheader font-weight
+
 ## 1.3.1 - 2015-11-12
 - Changed web superheading to regular weight.
 - Changed name of `.superheader` to `.superheading`.

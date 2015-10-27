@@ -140,70 +140,82 @@ body {
     line-height: @base-line-height;
 }
 
-.heading-1( @fs: 34px, @line-height: 44px ) {
+.heading-1( @fs: 34px ) {
     @font-size: @fs;
     .webfont-regular();
-    // Spacing in the design manual is based off of the baseline so this margin
-    // number has been eyeballed to be 30px.
-    margin-bottom: unit( 16px / @font-size, em );
+
+    margin-bottom: unit( 20px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @line-height / @font-size );
+    line-height: 1.25;
 }
 
-.heading-2( @fs: 26px, @line-height: 33px ) {
+.heading-2( @fs: 26px ) {
     @font-size: @fs;
     .webfont-regular();
-    // Spacing in the design manual is based off of the baseline so this margin
-    // number has been eyeballed to be 30px.
-    margin-bottom: unit( 19px / @font-size, em );
+
+    margin-bottom: unit( 20px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @line-height / @font-size );
+    line-height: 1.25;
+
+    p ~ & {
+        margin-top: unit( 45px / @font-size, em );
+    }
 }
 
-.heading-3( @fs: 22px, @line-height: 28px )  {
+.heading-3( @fs: 22px )  {
     @font-size: @fs;
     .webfont-regular();
-    // Spacing in the design manual is based off of the baseline so this margin
-    // number has been eyeballed to be 30px.
-    margin-bottom: unit( 21px / @font-size, em );
+
+    margin-bottom: unit( 20px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @line-height / @font-size );
+    line-height: 1.25;
+
+    p ~ & {
+        margin-top: unit( 45px / @font-size, em );
+    }
 }
 
-.heading-4( @fs: 18px, @line-height: @base-line-height-px )  {
+.heading-4( @fs: 18px )  {
     @font-size: @fs;
     .webfont-medium();
-    // Spacing in the design manual is based off of the baseline so this margin
-    // number has been eyeballed to be 30px.
-    margin-bottom: unit( 21px / @font-size, em );
+
+    margin-bottom: unit( 15px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @line-height / @font-size );
+    line-height: 1.25;
+
+    p ~ & {
+        margin-top: unit( 30px / @font-size, em );
+    }
 }
 
-.heading-5( @fs: 14px, @line-height: @base-line-height-px )  {
+.heading-5( @fs: 14px )  {
     @font-size: @fs;
     .webfont-demi();
 
     letter-spacing: 1px;
     text-transform: uppercase;
-    // Spacing in the design manual is based off of the baseline so this margin
-    // number has been eyeballed to be 15px.
-    margin-bottom: unit( 5px / @font-size, em );
+    margin-bottom: unit( 15px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @line-height / @font-size );
+    line-height: 1.25;
+
+    p ~ & {
+        margin-top: unit( 30px / @font-size, em );
+    }
 }
 
-.heading-6( @fs: 12px, @line-height: @base-line-height-px )  {
+.heading-6( @fs: 12px )  {
     @font-size: @fs;
     .webfont-demi();
 
     letter-spacing: 1px;
     text-transform: uppercase;
-    // Spacing in the design manual is based off of the baseline so this margin
-    // number has been eyeballed to be 15px.
-    margin-bottom: unit( 5px / @font-size, em );
+    margin-bottom: unit( 15px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @line-height / @font-size );
+    line-height: 1.25;
+
+    p ~ & {
+        margin-top: unit( 30px / @font-size, em );
+    }
 }
 
 h1,
@@ -258,21 +270,28 @@ h6,
 }
 
 .subheader {
-    .heading-4();
-    .webfont-regular();
+    .heading-3();
+
+    margin-top: unit( 30px / @font-size, em );
+
+    .respond-to-max(@bp-xs-max, {
+        // Use the same regular weight but reduce the sizes to h4 size
+        margin-top: unit( 30px / 18px, em );
+        margin-bottom: unit( 15px / 18px, em );
+        font-size: unit( 18px / @base-font-size-px, em );
+    });
 }
 
 .superheading {
     // For when you want a heading that's bigger than a normal H1
     @font-size: 48px;
-    @line-height: 60px;
 
     .webfont-regular();
-    // Spacing in the design manual is based off of the baseline so this margin
-    // number has been eyeballed to be 30px.
-    margin-bottom: unit( 9px / @font-size, em );
+
+    margin-bottom: unit( 20px / @font-size, em );
+
     font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @line-height / @font-size );
+    line-height: 1.25;
 }
 
 // To be deprecated at the 2.0 release:
@@ -302,7 +321,6 @@ dl,
 table,
 figure {
     margin-top: 0;
-    // Spacing has been eyeballed to be 30px from the baseline.
     margin-bottom: unit(20px / @base-font-size-px, em);
 }
 
