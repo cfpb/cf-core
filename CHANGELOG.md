@@ -5,6 +5,9 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 ## Unreleased
 
+## 1.3.0 - 2015-10-28
+- Updated colors to use 18F's US Web Standards color pallette.
+
 ## 1.2.0 - 2015-10-13
 
 - Updated to DMs t-shirt sized breakpoint variables
