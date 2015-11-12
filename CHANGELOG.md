@@ -7,6 +7,9 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 ## 1.3.1 - 2015-11-12
 - Changed web superheading to regular weight.
+- Changed name of `.superheader` to `.superheading`.
+  - :warn: **Use of `.superheader` is deprecated and the class will be removed
+    at the 2.0 release of cf-core.**
 
 ## 1.3.0 - 2015-10-28
 - Updated colors to use 18F's US Web Standards color palette.
