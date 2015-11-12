@@ -5,8 +5,11 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 ## Unreleased
 
+## 1.3.1 - 2015-11-12
+- Changed web superheading to regular weight.
+
 ## 1.3.0 - 2015-10-28
-- Updated colors to use 18F's US Web Standards color pallette.
+- Updated colors to use 18F's US Web Standards color palette.
 
 ## 1.2.0 - 2015-10-13
 
