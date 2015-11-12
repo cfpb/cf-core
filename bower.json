@@ -1,6 +1,6 @@
 {
   "name": "cf-core",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Base styling, including heading hierarchy, links, and some handy webfont mixins for Capital Framework.",
   "keywords": [
     "capital-framework",

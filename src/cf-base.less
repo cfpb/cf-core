@@ -127,8 +127,8 @@
         <p class="subheader">Example subheader that's kinda long</p>
     - name: Super header
       markup: |
-        <h1 class="superheader">Example super header</h1>
-        <p class="superheader">Example super header</p>
+        <h1 class="superheading">Example super heading</h1>
+        <p class="superheading">Example super heading</p>
   tags:
     - cf-core
 */
@@ -262,12 +262,12 @@ h6,
     .webfont-regular();
 }
 
-.superheader {
+.superheading {
     // For when you want a heading that's bigger than a normal H1
     @font-size: 48px;
     @line-height: 60px;
 
-    .webfont-demi();
+    .webfont-regular();
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 30px.
     margin-bottom: unit( 9px / @font-size, em );
