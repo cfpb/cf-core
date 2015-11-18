@@ -5,18 +5,21 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 ## Unreleased
 
+## 1.4.0 - 2015-11-18
+
 Updating web type spacing and leading
 
 __Note:__ We are no longer optically adjusting margins/padding to match design mockups pixel perfectly
 
 ### Changed
 
-- Updated text leading (line-height) to match recommendation from DM issue #349
-- Updated text top and bottom margins to match recommendation from DM issue #269
+- Updated text leading (line-height) to match recommendation from CFPB Design Manual issue #349
+- Updated text top and bottom margins to match recommendation from CFPB Design Manual issue #269
+- Renamed subheader to lead-paragraph
 
 ### Fixed
 
-- Fixed subheader font-weight
+- Fixed subheading font-weight
 
 ## 1.3.1 - 2015-11-12
 - Changed web superheading to regular weight.
